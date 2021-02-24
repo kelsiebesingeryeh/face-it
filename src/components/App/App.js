@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
+import Category from '../Category/Category';
 
 class App extends Component {
   constructor(){
@@ -38,9 +39,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>FaceIt</h1>
-        <section className='category-container'>
+      <main>
+      <Route exact path='/' render={() => {
+        return (
+          <div className="App">
+            <h1>FaceIt</h1>
+            <section className="category-container">
+              <h2>Eco-Friendly</h2>
+              <h2>FairTrade</h2>
+              <h2>Vegan</h2>
+            </section>
+          </div>
+        )
+        }}
+        />
+
           <Route
             exact
             path='/:category'
@@ -58,8 +71,7 @@ class App extends Component {
               return <Category data={categoryType} />
             }}
           />
-        </section>
-      </div>
+    </main>
     );
   }
 }
