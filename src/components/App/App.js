@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link} from 'react-router-dom';
 import './App.css';
 import Category from '../Category/Category';
+import Nav from '../Nav/Nav';
 
 class App extends Component {
   constructor(){
@@ -43,6 +44,7 @@ class App extends Component {
       <Route exact path='/' render={() => {
         return (
           <div className="App">
+            <Nav />
             <h1>FaceIt</h1>
             <section className="category-container">
               <Link to="eco">
