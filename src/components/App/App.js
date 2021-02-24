@@ -3,6 +3,7 @@ import { Route, Link} from 'react-router-dom';
 import './App.css';
 import Category from '../Category/Category';
 import Nav from '../Nav/Nav';
+import Logo from '../Logo/Logo';
 
 class App extends Component {
   constructor(){
@@ -15,17 +16,17 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
-    fetch('http://makeup-api.herokuapp.com/api/v1/products.json')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          makeup: data
-        })
-        this.sortByCategory(this.state.makeup)
-      })
-      .catch(err => console.log('error'))
-  }
+  // componentDidMount(){
+  //   fetch('http://makeup-api.herokuapp.com/api/v1/products.json')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       this.setState({
+  //         makeup: data
+  //       })
+  //       this.sortByCategory(this.state.makeup)
+  //     })
+  //     .catch(err => console.log('error'))
+  // }
 
   sortByCategory = response => {
     const vegan = response.filter(item => item["tag_list"].includes('Vegan'));
@@ -61,6 +62,7 @@ class App extends Component {
         return (
           <div className="App">
             <h1>FaceIt</h1>
+            <Logo />
             <h2>Mission Statement: This is our mission statement.</h2>
             <section className="category-container">
               <Link to="eco">
