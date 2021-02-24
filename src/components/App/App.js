@@ -61,17 +61,19 @@ class App extends Component {
       <Route exact path='/' render={() => {
         return (
           <div className="App">
-            <h1>FaceIt</h1>
-            <Logo />
-            <h2>Mission Statement: This is our mission statement.</h2>
+            <div className="title-container">
+              <h1>FaceIt</h1>
+              <h2 class="mission-statement">Discover beauty products that compliment our lifestyles.</h2>
+            </div>
             <section className="category-container">
               <Link to="eco">
-                <article className="mainCategory">
-                  <img
+                <article className="mainCategory" style={{backgroundImage: `url(${"https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"})`}}>
+                  {/* <img
                     className="mainCategoryImage"
                     src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"
                     alt="forest"
-                  ></img>
+                  ></img> */}
+                  <h3 className="mainCategoryText">Eco</h3>
                 </article>
               </Link>
               <Link to="fairTrade">
