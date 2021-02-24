@@ -18,21 +18,33 @@ class App extends Component {
   componentDidMount(){
     fetch('http://makeup-api.herokuapp.com/api/v1/products.json')
       .then(response => response.json())
-      .then(response => {
-        console.log(response)
+      .then(data => {
+        this.setState({
+          makeup: data
+        })
+        this.sortByCategory(this.state.makeup)
       })
       .catch(err => console.log('error'))
   }
 
   sortByCategory = response => {
-    console.log(response)
-    const vegan = response.filter(item => item.tag_list.includes('vegan'));
-    const fairTrade = response.filter(item => item.tag_list.includes('fair trade'));
+    const vegan = response.filter(item => item["tag_list"].includes('Vegan'));
+    const eco = response.filter(
+      (item) =>
+        item["tag_list"].includes("Ewg verified")
+        // item["tag_list"].includes("Purpicks") ||
+        // item["tag_list"].includes("Certclean") ||
+        // item["tag_list"].includes("Ecocert") ||
+        // item["tag_list"].includes("Usda organic") ||
+        // item["tag_list"].includes("Non-gmo") ||
+        // item["tag_list"].includes("Organic")
+    );
+    // const fairTrade = response.filter(item => item["tag_list"].includes("Fair Trade"));
 
     this.setState({ vegan: vegan })
-    this.setState({ fairTrade: fairTrade })
-    //eco -> which tags do we want to include for this?
+    this.setState({ eco: eco })
   }
+  
 
   // what's data type are we getting from the api call? -> array of objects with property tags (array of strings) which we want to filter through to create category arrays.
 
