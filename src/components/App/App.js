@@ -46,13 +46,31 @@ class App extends Component {
             <h1>FaceIt</h1>
             <section className="category-container">
               <Link to="eco">
-                <article className="mainCategory">Eco-Friendly</article>
+                <article className="mainCategory">
+                  <img
+                    className="mainCategoryImage"
+                    src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"
+                    alt="forest"
+                  ></img>
+                </article>
               </Link>
               <Link to="fairTrade">
-                <article className="mainCategory">FairTrade</article>
+                <article className="mainCategory">
+                  <img
+                    className="mainCategoryImage"
+                    src="https://images.unsplash.com/photo-1591130219388-ae3d1c17431b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=633&q=80"
+                    alt="world-map"
+                  ></img>
+                </article>
               </Link>
               <Link to="vegan">
-                <article className="mainCategory">Vegan</article>
+                <article className="mainCategory">
+                  <img
+                    className="mainCategoryImage"
+                    src="https://images.unsplash.com/photo-1509298271096-c979b9203fd7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1212&q=80"
+                    alt="veggie-heart"
+                  ></img>
+                </article>
               </Link>
             </section>
           </div>

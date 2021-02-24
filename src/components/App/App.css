@@ -12,8 +12,10 @@ body {
 
 .category-container {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 20rem;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
 }
 
 a {
@@ -30,4 +32,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mainCategoryImage {
+    width: 15rem;
+}
+
+@media screen and (min-width: 800px) {
+  .category-container {
+    flex-direction: row;
+  }
 }
