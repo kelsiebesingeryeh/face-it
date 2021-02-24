@@ -46,6 +46,7 @@ class App extends Component {
           <div className="App">
             <Nav />
             <h1>FaceIt</h1>
+            <h2>Mission Statement: This is our mission statement.</h2>
             <section className="category-container">
               <Link to="eco">
                 <article className="mainCategory">

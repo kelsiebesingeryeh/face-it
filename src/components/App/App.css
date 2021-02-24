@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-h1 {
-  text-align: center;
-}
 
 body {
   background: #F4E9E1;
   color: #1F0800;
   font-family: 'Raleway',
   sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-left: 1rem;
+  font-size: 1.25rem;
 }
 
 .category-container {
