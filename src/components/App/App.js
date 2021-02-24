@@ -41,10 +41,10 @@ class App extends Component {
   render() {
     return (
       <main>
+        <Nav />
       <Route exact path='/' render={() => {
         return (
           <div className="App">
-            <Nav />
             <h1>FaceIt</h1>
             <h2>Mission Statement: This is our mission statement.</h2>
             <section className="category-container">
