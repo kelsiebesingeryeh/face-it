@@ -18,13 +18,16 @@ class App extends Component {
   componentDidMount(){
     fetch('http://makeup-api.herokuapp.com/api/v1/products.json')
       .then(response => response.json())
-      .then(response => this.sortByCategory(response))
+      .then(response => {
+        console.log(response)
+      })
       .catch(err => console.log('error'))
   }
 
   sortByCategory = response => {
-    const vegan = response.filter(item => item.tags.includes('vegan'));
-    const fairTrade = response.filter(item => item.tags.includes('fair trade'));
+    console.log(response)
+    const vegan = response.filter(item => item.tag_list.includes('vegan'));
+    const fairTrade = response.filter(item => item.tag_list.includes('fair trade'));
 
     this.setState({ vegan: vegan })
     this.setState({ fairTrade: fairTrade })
