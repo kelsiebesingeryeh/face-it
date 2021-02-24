@@ -46,13 +46,13 @@ class App extends Component {
             <h1>FaceIt</h1>
             <section className="category-container">
               <Link to="eco">
-                <h2>Eco-Friendly</h2>
+                <article className="mainCategory">Eco-Friendly</article>
               </Link>
               <Link to="fairTrade">
-                <h2>FairTrade</h2>
+                <article className="mainCategory">FairTrade</article>
               </Link>
               <Link to="vegan">
-                <h2>Vegan</h2>
+                <article className="mainCategory">Vegan</article>
               </Link>
             </section>
           </div>
