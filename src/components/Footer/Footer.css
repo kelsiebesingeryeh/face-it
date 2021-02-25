@@ -1,0 +1,36 @@
+footer {
+    background-color: #A63D10;
+    color: #F4E9E1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+h5 {
+    margin-top: 0;
+}
+
+.dev {
+    border: solid 1px #D1925C;
+    border-radius: 7px;
+    padding: 1em;
+}
+
+.dev-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    width: 80%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+    .dev {
+        width: 10em;
+    }
+}
