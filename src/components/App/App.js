@@ -97,7 +97,6 @@ class App extends Component {
             )}
           }
         }/>
-
         <Route
           exact
           path='/:category'
@@ -113,7 +112,7 @@ class App extends Component {
             return <Category data={categoryType} />
           }}
         />
-      </main>
+    </main>
   )}
 }
 
