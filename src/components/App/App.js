@@ -3,6 +3,7 @@ import { Route, Link} from 'react-router-dom';
 import './App.css';
 import Category from '../Category/Category';
 import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 import Logo from '../Logo/Logo';
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
     this.state = {
       makeup: [],
       vegan: [],
-      fairTrade: [],
+      allergyFriendly: [],
       eco: []
     }
   }
@@ -64,7 +65,7 @@ class App extends Component {
             <div className="title-container">
               <h1>FaceIt</h1>
               <Logo />
-              <h2 class="mission-statement">Discover beauty products that compliment our lifestyles.</h2>
+              <h2 class="mission-statement">Discover beauty products that compliment your lifestyle.</h2>
             </div>
             <section className="category-container">
               <Link to="eco">
@@ -74,11 +75,11 @@ class App extends Component {
                   <h3 className="mainCategoryText">Eco</h3>
                 </article>
               </Link>
-              <Link to="fairTrade">
+              <Link to="allergyFriendly">
                 <article 
                   className="mainCategory" 
-                  style={{backgroundImage: `url(${"https://images.unsplash.com/photo-1591130219388-ae3d1c17431b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=633&q=80"})`}}>
-                  <h3 className="mainCategoryText">Fair Trade</h3>
+                  style={{backgroundImage: `url(${"https://images.unsplash.com/photo-1586445781752-63b964aa0404?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80://images.unsplash.com/photo-1559483785-5771e42ba93e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80://images.unsplash.com/photo-1591130219388-ae3d1c17431b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=633&q=80"})`}}>
+                  <h3 className="mainCategoryText">Allergy Friendly</h3>
                 </article>
               </Link>
               <Link to="vegan">
@@ -102,8 +103,8 @@ class App extends Component {
 
               if (match.params.category === 'vegan') {
                 categoryType = this.state.vegan;
-              } else if (match.params.category === 'fairTrade') {
-                categoryType = this.state.fairTrade;
+              } else if (match.params.category === 'allergyFriendly') {
+                categoryType = this.state.allergyFriendly;
               } else if (match.params.category === 'eco') {
                 categoryType = this.state.eco;
               }
@@ -111,6 +112,7 @@ class App extends Component {
               return <Category data={categoryType} />
             }}
           />
+      <Footer />
     </main>
     );
   }
