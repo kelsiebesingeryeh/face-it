@@ -1,0 +1,28 @@
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  padding: 4.5em;
+  background: url('./error-img.jpg') #1F0800;
+  background-size: cover;
+  box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8),
+      -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
+  color: #1F0800;
+}
+
+.error-message h2 {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.error-message p {
+  padding: 0;
+  margin: .5em;
+}
+
+.error-message h3 {
+  padding: 0;
+  margin: 0;
+}
