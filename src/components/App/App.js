@@ -12,38 +12,47 @@ class App extends Component {
       makeup: [],
       vegan: [],
       fairTrade: [],
-      eco: []
+      allergenFriendly: []
     }
   }
 
-  // componentDidMount(){
-  //   fetch('http://makeup-api.herokuapp.com/api/v1/products.json')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       this.setState({
-  //         makeup: data
-  //       })
-  //       this.sortByCategory(this.state.makeup)
-  //     })
-  //     .catch(err => console.log('error'))
-  // }
+  componentDidMount(){
+    fetch("http://localhost:3001/api/v1/makeup")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          makeup: data,
+        });
+        this.sortByCategory(this.state.makeup);
+      })
+      .catch((err) => console.log("error"));
+  }
 
   sortByCategory = response => {
     const vegan = response.filter(item => item["tag_list"].includes('Vegan'));
     const eco = response.filter(
       (item) =>
-        item["tag_list"].includes("Ewg verified")
-        // item["tag_list"].includes("Purpicks") ||
-        // item["tag_list"].includes("Certclean") ||
-        // item["tag_list"].includes("Ecocert") ||
-        // item["tag_list"].includes("Usda organic") ||
-        // item["tag_list"].includes("Non-gmo") ||
-        // item["tag_list"].includes("Organic")
+        item["tag_list"].includes("EWG Verified") ||
+        item["tag_list"].includes("purpicks") ||
+        item["tag_list"].includes("CertClean") ||
+        item["tag_list"].includes("EcoCert") ||
+        item["tag_list"].includes("USDA Organic") ||
+        item["tag_list"].includes("Non-GMO") ||
+        item["tag_list"].includes("Organic")
     );
-    // const fairTrade = response.filter(item => item["tag_list"].includes("Fair Trade"));
+    const allergenFriendly = response.filter(
+      (item) =>
+        item["tag_list"].includes("Dairy Free") ||
+        item["tag_list"].includes("Gluten Free") ||
+        item["tag_list"].includes("Hypoallergenic") ||
+        item["tag_list"].includes("Peanut Free Product") ||
+        item["tag_list"].includes("alcohol free") ||
+        item["tag_list"].includes("silicone free")
+    )
 
     this.setState({ vegan: vegan })
     this.setState({ eco: eco })
+    this.setState({ allergenFriendly: allergenFriendly });
   }
   
 
