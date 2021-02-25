@@ -1,0 +1,39 @@
+nav {
+    background: #1F0800;
+    color: #F4E9E1;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 1rem;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+li {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+nav a {
+    color:#F4E9E1;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: right;
+}
+
+.categoryNavList {
+    display: flex;
+    width: 90vw;
+    justify-content: flex-end;
+}
+.categoryNavList a {
+    margin-left: 1rem;
+}
