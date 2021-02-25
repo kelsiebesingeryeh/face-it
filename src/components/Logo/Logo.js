@@ -3,7 +3,7 @@ import './Logo.css';
 
 const Logo = () => {
     return (
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 600 600" width="100" height="100">
+        <svg id="logo-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 600 600" width="100" height="100">
             <g>
                 <path d="M330 11.74L166.09 118.7L166.09 332.61L330 439.57L493.91 332.61L493.91 118.7L330 11.74Z" id="a5nciMXUI" opacity="1" fill="#ffffff" fill-opacity="1">
                     </path>
