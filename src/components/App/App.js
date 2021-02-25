@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Link} from 'react-router-dom';
 import './App.css';
-import Category from '../Category/Category';
+import Eco from '../Eco/Eco';
+import Vegan from '../Vegan/Vegan';
+import AllergenFriendly from '../AllergenFriendly/AllergenFriendly';
 import Nav from '../Nav/Nav';
 import Logo from '../Logo/Logo';
 
@@ -11,8 +13,8 @@ class App extends Component {
     this.state = {
       makeup: [],
       vegan: [],
-      fairTrade: [],
-      allergenFriendly: []
+      allergenFriendly: [],
+      eco: []
     }
   }
 
@@ -28,6 +30,7 @@ class App extends Component {
       .catch((err) => console.log("error"));
   }
 
+  
   sortByCategory = response => {
     const vegan = response.filter(item => item["tag_list"].includes('Vegan'));
     const eco = response.filter(
@@ -107,17 +110,14 @@ class App extends Component {
             exact
             path='/:category'
             render={({ match }) => {
-              let categoryType
 
               if (match.params.category === 'vegan') {
-                categoryType = this.state.vegan;
-              } else if (match.params.category === 'fairTrade') {
-                categoryType = this.state.fairTrade;
+                return <Vegan vegan={this.state.vegan}/>
+              } else if (match.params.category === 'allergenFriendly') {
+                return <AllergenFriendly allergenFriendly={this.state.allergenFriendly}/>
               } else if (match.params.category === 'eco') {
-                categoryType = this.state.eco;
+                return <Eco eco={this.state.eco}/>
               }
-
-              return <Category data={categoryType} />
             }}
           />
     </main>

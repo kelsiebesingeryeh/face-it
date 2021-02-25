@@ -13,8 +13,8 @@ function Nav() {
             <Link to="eco">
               <li>Eco</li>
             </Link>
-            <Link to="fairTrade">
-              <li>FairTrade</li>
+            <Link to="allergenFriendly">
+              <li>Allergen Friendly</li>
             </Link>
             <Link to="vegan">
               <li>Vegan</li>
