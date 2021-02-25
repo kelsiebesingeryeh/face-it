@@ -2,7 +2,7 @@ import React from 'react';
 import './Nav.css';
 import { Link } from "react-router-dom";
 
-function Nav() {
+const Nav = () => {
     return (
       <nav>
         <ul>
@@ -26,6 +26,3 @@ function Nav() {
 }
 
 export default Nav;
-// items in Nav Bar
-// home icon
-// 

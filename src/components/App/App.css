@@ -16,7 +16,7 @@ h2 {
   width: 80vw;
 }
 
-.category-container {
+.categoryContainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -59,18 +59,18 @@ h1 {
   width: 100%;
 }
 
-.mission-statement {
+.missionStatement {
   font-size: 1em;
 }
 
-.title-container {
+.titleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media screen and (min-width: 800px) {
-  .category-container {
+  .categoryContainer {
     flex-direction: row;
     height: 70vh;
   }
@@ -78,7 +78,7 @@ h1 {
     width: 24vw;
     height: 40vh;
   }
-  .mission-statement {
+  .missionStatement {
     font-size: 1.5em;
   }
 }
