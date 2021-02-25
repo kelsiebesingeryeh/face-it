@@ -1,4 +1,5 @@
 import React from 'react';
+import './Type.css';
 
 const Type = ({img, title}) => {
     return (
