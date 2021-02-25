@@ -3,6 +3,7 @@ import { Route, Link} from 'react-router-dom';
 import './App.css';
 import Category from '../Category/Category';
 import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 import Logo from '../Logo/Logo';
 
 class App extends Component {
@@ -111,6 +112,7 @@ class App extends Component {
               return <Category data={categoryType} />
             }}
           />
+      <Footer />
     </main>
     );
   }
