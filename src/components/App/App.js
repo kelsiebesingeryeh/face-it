@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Link} from 'react-router-dom';
 import './App.css';
-import Eco from '../Eco/Eco';
-import Vegan from '../Vegan/Vegan';
-import AllergenFriendly from '../AllergenFriendly/AllergenFriendly';
+import Eco from '../Category/Eco';
+import Vegan from '../Category/Vegan';
+import AllergenFriendly from '../Category/AllergenFriendly';
 import Nav from '../Nav/Nav';
 import Logo from '../Logo/Logo';
 
@@ -86,7 +86,7 @@ class App extends Component {
                   <h3 className="mainCategoryText">Eco</h3>
                 </article>
               </Link>
-              <Link to="fairTrade">
+              <Link to="allergenFriendly">
                 <article 
                   className="mainCategory" 
                   style={{backgroundImage: `url(${"https://images.unsplash.com/photo-1591130219388-ae3d1c17431b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=633&q=80"})`}}>
