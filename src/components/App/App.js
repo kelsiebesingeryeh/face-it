@@ -5,8 +5,8 @@ import Eco from '../Category/Eco';
 import Vegan from '../Category/Vegan';
 import AllergenFriendly from '../Category/AllergenFriendly';
 import Nav from '../Nav/Nav';
-import Error from '../Error/Error';
 import Logo from '../Logo/Logo';
+import Error from '../Error/Error';
 
 class App extends Component {
   constructor(){
@@ -64,49 +64,52 @@ class App extends Component {
       <main>
         <Nav />
       <Route exact path='/' render={() => {
-        return (
-          <div className="App">
-            <div className="titleContainer">
-              <h1>FaceIt</h1>
-              <Logo />
-              <h2 className="missionStatement">Discover beauty products that compliment your lifestyle.</h2>
+        if(!this.state.makeup.length){
+          <Redirect to='/error' />
+        } else {
+          return (
+            <div className="App">
+              <div className="titleContainer">
+                <h1>FaceIt</h1>
+                <Logo />
+                <h2 className="missionStatement">Discover beauty products that compliment your lifestyle.</h2>
+              </div>
+              <section className="categoryContainer">
+                <Link to="eco">
+                  <article
+                    className="mainCategory"
+                    style={{
+                      backgroundImage: `url(${"https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"})`,
+                    }}
+                  >
+                    <h3 className="mainCategoryText">Eco</h3>
+                  </article>
+                </Link>
+                <Link to="allergenFriendly">
+                  <article
+                    className="mainCategory"
+                    style={{
+                      backgroundImage: `url(${"https://images.unsplash.com/photo-1586445781752-63b964aa0404?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"})`,
+                    }}
+                  >
+                    <h3 className="mainCategoryText">Allergen Friendly</h3>
+                  </article>
+                </Link>
+                <Link to="vegan">
+                  <article
+                    className="mainCategory"
+                    style={{
+                      backgroundImage: `url(${"https://images.unsplash.com/photo-1509298271096-c979b9203fd7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1212&q=80"})`,
+                    }}
+                  >
+                    <h3 className="mainCategoryText">Vegan</h3>
+                  </article>
+                </Link>
+              </section>
             </div>
-            <section className="categoryContainer">
-              <Link to="eco">
-                <article
-                  className="mainCategory"
-                  style={{
-                    backgroundImage: `url(${"https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"})`,
-                  }}
-                >
-                  <h3 className="mainCategoryText">Eco</h3>
-                </article>
-              </Link>
-              <Link to="allergenFriendly">
-                <article
-                  className="mainCategory"
-                  style={{
-                    backgroundImage: `url(${"https://images.unsplash.com/photo-1586445781752-63b964aa0404?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"})`,
-                  }}
-                >
-                  <h3 className="mainCategoryText">Fair Trade</h3>
-                </article>
-              </Link>
-              <Link to="vegan">
-                <article
-                  className="mainCategory"
-                  style={{
-                    backgroundImage: `url(${"https://images.unsplash.com/photo-1509298271096-c979b9203fd7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1212&q=80"})`,
-                  }}
-                >
-                  <h3 className="mainCategoryText">Vegan</h3>
-                </article>
-              </Link>
-            </section>
-          </div>
-        );
-        }}
-        />
+          );
+          }}
+        }/>
       }
 
           <Route
@@ -123,18 +126,19 @@ class App extends Component {
               }
             }}
           />
+
         <Route exact path='/' render={() => {
           if (!this.state.makeup.length) {
             return <Error />
           } else {
             return (
               <div className="App">
-                <div className="title-container">
+                <div className="titleContainer">
                   <h1>FaceIt</h1>
                   <Logo />
-                  <h2 class="mission-statement">Discover beauty products that compliment our lifestyles.</h2>
+                  <h2 className="missionStatement">Discover beauty products that compliment our lifestyles.</h2>
                 </div>
-                <section className="category-container">
+                <section className="categoryContainer">
                   <Link to="eco">
                     <article
                       className="mainCategory"
@@ -142,11 +146,11 @@ class App extends Component {
                       <h3 className="mainCategoryText">Eco</h3>
                     </article>
                   </Link>
-                  <Link to="fairTrade">
+                  <Link to="allergenFriendly">
                     <article
                       className="mainCategory"
                       style={{backgroundImage: `url(${"https://images.unsplash.com/photo-1591130219388-ae3d1c17431b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=633&q=80"})`}}>
-                      <h3 className="mainCategoryText">Fair Trade</h3>
+                      <h3 className="mainCategoryText">Allergen Friendly</h3>
                     </article>
                   </Link>
                   <Link to="vegan">
@@ -161,7 +165,7 @@ class App extends Component {
             )}
           }
         }/>
-        <Route
+        {/* <Route
           exact
           path='/:category'
           render={({ match }) => {
@@ -175,7 +179,7 @@ class App extends Component {
               }
             return <Category data={categoryType} />
           }}
-        />
+        /> */}
       <Route
         exact
         path='/error'
