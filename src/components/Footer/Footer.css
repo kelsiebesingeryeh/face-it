@@ -20,6 +20,7 @@ h5 {
 .dev-container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
     width: 80%;
 }
 

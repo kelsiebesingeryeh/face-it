@@ -1,10 +1,11 @@
 import React from 'react';
+import Logo from '../Logo/Logo'
 import './Footer.css';
 
 const Footer = () => {
     return (
        <footer>
-           <h4>FaceIt</h4>
+           <h4>FaceIt</h4> 
              <h5>is brought to you by</h5>
               <div className="dev-container">
                 <div className="dev">
@@ -30,6 +31,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+              <Logo />
        </footer> 
     )
 }
