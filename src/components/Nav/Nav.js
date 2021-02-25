@@ -2,7 +2,7 @@ import React from 'react';
 import './Nav.css';
 import { Link } from "react-router-dom";
 
-function Nav() {
+const Nav = () => {
     return (
       <nav>
         <ul>
@@ -13,8 +13,8 @@ function Nav() {
             <Link to="eco">
               <li>Eco</li>
             </Link>
-            <Link to="fairTrade">
-              <li>FairTrade</li>
+            <Link to="allergenFriendly">
+              <li>Allergen Friendly</li>
             </Link>
             <Link to="vegan">
               <li>Vegan</li>
@@ -26,6 +26,3 @@ function Nav() {
 }
 
 export default Nav;
-// items in Nav Bar
-// home icon
-// 
