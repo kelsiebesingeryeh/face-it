@@ -23,7 +23,7 @@ const AllergenFriendly = ({ allergenFriendly }) => {
       } else if(item === 'eyeshadow') {
         return 'https://images.unsplash.com/photo-1583241801142-113b9f5bbde5?ixid=MXwxMjA3fDB8MHxwaG90[…]ufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
       } else if(item === 'foundation') {
-        return 'https://images.unsplash.com/photo-1590156546946-ce55a12a6a5d?ixid=MXwxMjA3fDB8MHxzZWFy[…]fHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'; 
+        return 'https://images.unsplash.com/photo-1590156546946-ce55a12a6a5d?ixid=MXwxMjA3fDB8MHxzZWFy[…]fHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60';
       } else if(item === 'lip_liner') {
         return 'https://images.unsplash.com/photo-1597225312380-7b74ec8f4d74?ixid=MXwxMjA3fDB8MHxzZWFy[…]58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60';
       } else if(item === 'lipstick') {
@@ -35,12 +35,12 @@ const AllergenFriendly = ({ allergenFriendly }) => {
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
-      return <Type 
-      title={item} 
-      key={item} 
-      img={url}/>
+      return <Type
+                title={item}
+                key={item}
+                img={url}/>
     });
-  
+
     return (
         <div className="productContainer">
             {productsOnDisplay}

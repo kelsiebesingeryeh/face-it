@@ -64,54 +64,54 @@ class App extends Component {
     return (
       <main>
         <Nav />
-      <Route exact path='/' render={() => {
-        if(!this.state.makeup.length){
-          <Redirect to='/error' />
-        } else {
-          return (
-            <div className="App">
-              <div className="titleContainer">
-                <h1>FaceIt</h1>
-                <Logo />
-                <h2 className="missionStatement">Discover beauty products that compliment your lifestyle.</h2>
+        <Route exact path='/' render={() => {
+          if(!this.state.makeup.length) {
+            <Redirect to='/error' />
+          } else {
+            return (
+              <div className="App">
+                <div className="titleContainer">
+                  <h1>FaceIt</h1>
+                  <Logo />
+                  <h2 className="missionStatement">Discover beauty products that compliment your lifestyle.</h2>
+                </div>
+                <section className="categoryContainer">
+                  <Link to="eco">
+                    <article
+                      className="mainCategory"
+                      style={{
+                        backgroundImage: `url(${"https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"})`,
+                      }}
+                    >
+                      <h3 className="mainCategoryText">Eco</h3>
+                    </article>
+                  </Link>
+                  <Link to="allergenFriendly">
+                    <article
+                      className="mainCategory"
+                      style={{
+                        backgroundImage: `url(${"https://images.unsplash.com/photo-1586445781752-63b964aa0404?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"})`,
+                      }}
+                    >
+                      <h3 className="mainCategoryText">Allergen Friendly</h3>
+                    </article>
+                  </Link>
+                  <Link to="vegan">
+                    <article
+                      className="mainCategory"
+                      style={{
+                        backgroundImage: `url(${"https://images.unsplash.com/photo-1509298271096-c979b9203fd7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1212&q=80"})`,
+                      }}
+                    >
+                      <h3 className="mainCategoryText">Vegan</h3>
+                    </article>
+                  </Link>
+                </section>
               </div>
-              <section className="categoryContainer">
-                <Link to="eco">
-                  <article
-                    className="mainCategory"
-                    style={{
-                      backgroundImage: `url(${"https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"})`,
-                    }}
-                  >
-                    <h3 className="mainCategoryText">Eco</h3>
-                  </article>
-                </Link>
-                <Link to="allergenFriendly">
-                  <article
-                    className="mainCategory"
-                    style={{
-                      backgroundImage: `url(${"https://images.unsplash.com/photo-1586445781752-63b964aa0404?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"})`,
-                    }}
-                  >
-                    <h3 className="mainCategoryText">Allergen Friendly</h3>
-                  </article>
-                </Link>
-                <Link to="vegan">
-                  <article
-                    className="mainCategory"
-                    style={{
-                      backgroundImage: `url(${"https://images.unsplash.com/photo-1509298271096-c979b9203fd7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1212&q=80"})`,
-                    }}
-                  >
-                    <h3 className="mainCategoryText">Vegan</h3>
-                  </article>
-                </Link>
-              </section>
-            </div>
-          );
-          }}
-        }/>
-      }
+            );
+            }
+          }
+          }/>
 
           <Route
             exact
