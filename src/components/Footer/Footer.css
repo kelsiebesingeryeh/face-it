@@ -26,12 +26,11 @@ h5 {
 
 .links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .links img {
-  width: 33%;
-  /* shadow */
+  width: 2rem;
 }
 
 @media screen and (min-width: 800px) {

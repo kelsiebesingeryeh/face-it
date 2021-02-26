@@ -14,16 +14,16 @@ const Footer = () => {
                 <div className="dev">
                   <p>Kelsie Besinger Yeh</p>
                   <div className="links">
-                    <a href="https://github.com/kelsiebesingeryeh/">Github</a>
-                    <a href="https://www.linkedin.com/in/kelsie-besinger-yeh-80947132/">LinkedIn</a>
+                    <a href="https://github.com/kelsiebesingeryeh/"><img src={github} alt='Kelsie GitHub' /></a>
+                    <a href="https://www.linkedin.com/in/kelsie-besinger-yeh-80947132/"><img src={linkedin} alt='Kelsie LinkedIn' /></a>
                   </div>
                 </div>
                 <div className="dev">
                   <p>Connie Hong </p>
                   <div className="links">
-                    <a href="https://github.com/conconartist">Github</a>
-                    <a href="https://www.linkedin.com/in/connie-h-hong/">LinkedIn</a>
-                    <a href="https://twitter.com/conconartist?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Twitter</a>
+                    <a href="https://github.com/conconartist"><img src={github} alt='Connie GitHub' /></a>
+                    <a href="https://www.linkedin.com/in/connie-h-hong/"><img src={linkedin} alt='Connie LinkedIn' /></a>
+                    <a href="https://twitter.com/conconartist?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"><img src={twitter} alt='Connie Twitter' /></a>
                   </div>
                 </div>
                 <div className="dev">
