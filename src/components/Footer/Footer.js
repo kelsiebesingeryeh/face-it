@@ -1,11 +1,14 @@
 import React from 'react';
 import Logo from '../Logo/Logo'
+import github from './github-logo.png';
+import linkedin from './linkedin-logo.png';
+import twitter from './twitter-logo.png';
 import './Footer.css';
 
 const Footer = () => {
     return (
        <footer>
-           <h4>FaceIt</h4> 
+           <h4>FaceIt</h4>
              <h5>is brought to you by</h5>
               <div className="dev-container">
                 <div className="dev">
@@ -26,13 +29,13 @@ const Footer = () => {
                 <div className="dev">
                   <p>Gabrielle Joyce</p>
                   <div className="links">
-                    <a href="https://github.com/gaj23">Github</a>
-                    <a href="https://www.linkedin.com/in/gaj23/">LinkedIn</a>
+                    <a href="https://github.com/gaj23"><img src={github} alt='Gabrielle GitHub' /></a>
+                    <a href="https://www.linkedin.com/in/gaj23/"><img src={linkedin} alt='Gabrielle LinkedIn' /></a>
                   </div>
                 </div>
               </div>
               <Logo />
-       </footer> 
+       </footer>
     )
 }
 

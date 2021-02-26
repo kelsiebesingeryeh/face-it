@@ -29,6 +29,11 @@ h5 {
     flex-direction: column;
 }
 
+.links img {
+  width: 33%;
+  /* shadow */
+}
+
 @media screen and (min-width: 800px) {
     .dev {
         width: 10em;
