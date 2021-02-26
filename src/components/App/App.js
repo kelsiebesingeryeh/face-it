@@ -9,6 +9,7 @@ import LoadingMessage from '../Loading/Loading';
 import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
+import LoadingImg from '../LoadingImg/LoadingImg';
 
 class App extends Component {
   constructor(){
