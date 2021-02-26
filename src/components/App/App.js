@@ -7,6 +7,7 @@ import AllergenFriendly from '../Category/AllergenFriendly';
 import Nav from '../Nav/Nav';
 import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
+import Footer from '../Footer/Footer';
 
 class App extends Component {
   constructor(){
@@ -116,7 +117,6 @@ class App extends Component {
             exact
             path='/:category'
             render={({ match }) => {
-
               if (match.params.category === 'vegan') {
                 return <Vegan vegan={this.state.vegan}/>
               } else if (match.params.category === 'allergenFriendly') {
@@ -127,64 +127,12 @@ class App extends Component {
             }}
           />
 
-        <Route exact path='/' render={() => {
-          if (!this.state.makeup.length) {
-            return <Error />
-          } else {
-            return (
-              <div className="App">
-                <div className="titleContainer">
-                  <h1>FaceIt</h1>
-                  <Logo />
-                  <h2 className="missionStatement">Discover beauty products that compliment our lifestyles.</h2>
-                </div>
-                <section className="categoryContainer">
-                  <Link to="eco">
-                    <article
-                      className="mainCategory"
-                      style={{backgroundImage: `url(${"https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"})`}}>
-                      <h3 className="mainCategoryText">Eco</h3>
-                    </article>
-                  </Link>
-                  <Link to="allergenFriendly">
-                    <article
-                      className="mainCategory"
-                      style={{backgroundImage: `url(${"https://images.unsplash.com/photo-1591130219388-ae3d1c17431b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=633&q=80"})`}}>
-                      <h3 className="mainCategoryText">Allergen Friendly</h3>
-                    </article>
-                  </Link>
-                  <Link to="vegan">
-                    <article
-                      className="mainCategory"
-                      style={{backgroundImage: `url(${"https://images.unsplash.com/photo-1509298271096-c979b9203fd7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1212&q=80"})`}}>
-                      <h3 className="mainCategoryText">Vegan</h3>
-                    </article>
-                  </Link>
-                </section>
-              </div>
-            )}
-          }
-        }/>
-        {/* <Route
-          exact
-          path='/:category'
-          render={({ match }) => {
-            let categoryType
-            if (match.params.category === 'vegan') {
-              categoryType = this.state.vegan;
-            } else if (match.params.category === 'fairTrade') {
-              categoryType = this.state.fairTrade;
-            } else if (match.params.category === 'eco') {
-              categoryType = this.state.eco;
-              }
-            return <Category data={categoryType} />
-          }}
-        /> */}
       <Route
         exact
         path='/error'
         render={() => <Error />}
       />
+      <Footer />
     </main>
   )}
 }
