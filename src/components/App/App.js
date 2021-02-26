@@ -5,6 +5,7 @@ import Eco from '../Category/Eco';
 import Vegan from '../Category/Vegan';
 import AllergenFriendly from '../Category/AllergenFriendly';
 import Nav from '../Nav/Nav';
+import LoadingMessage from '../Loading/Loading';
 import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
@@ -16,11 +17,14 @@ class App extends Component {
       makeup: [],
       vegan: [],
       allergenFriendly: [],
-      eco: []
+      eco: [],
+      isFetching: false, 
+      error: false
     }
   }
 
   componentDidMount(){
+    this.setState({isFetching: true});
     fetch("http://localhost:3001/api/v1/makeup")
       .then((response) => response.json())
       .then((data) => {
@@ -28,8 +32,12 @@ class App extends Component {
           makeup: data,
         });
         this.sortByCategory(this.state.makeup);
+        this.setState({isFetching: false});
       })
-      .catch((err) => console.log("error"));
+      .catch((err) => {
+        this.setState({error: true})
+        console.log("error")
+      });
   }
 
 
@@ -64,8 +72,9 @@ class App extends Component {
     return (
       <main>
         <Nav />
+        {this.state.isFetching && <LoadingMessage />}
         <Route exact path='/' render={() => {
-          if(!this.state.makeup.length) {
+          if(!this.state.makeup.length && this.state.error) {
             return <Redirect to='/error' />
           } else {
             return (
