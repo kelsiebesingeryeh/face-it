@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
 
@@ -38,14 +38,19 @@ const AllergenFriendly = ({ allergenFriendly }) => {
       return <Type
                 title={item}
                 key={item}
-                img={url}/>
+                img={url}
+              />
     });
 
-    return (
+    if(!productsOnDisplay.length) {
+      return <Redirect to='/error' />
+    } else {
+      return (
         <div className="productContainer">
-            {productsOnDisplay}
+        {productsOnDisplay}
         </div>
-    )
+      )
+    }
 }
 
 export default AllergenFriendly;
