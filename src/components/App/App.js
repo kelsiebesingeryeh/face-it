@@ -20,17 +20,17 @@ class App extends Component {
     }
   }
 
-  // componentDidMount(){
-  //   fetch("http://localhost:3001/api/v1/makeup")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       this.setState({
-  //         makeup: data,
-  //       });
-  //       this.sortByCategory(this.state.makeup);
-  //     })
-  //     .catch((err) => console.log("error"));
-  // }
+  componentDidMount(){
+    fetch("http://localhost:3001/api/v1/makeup")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({
+          makeup: data,
+        });
+        this.sortByCategory(this.state.makeup);
+      })
+      .catch((err) => console.log("error"));
+  }
 
 
   sortByCategory = response => {

@@ -42,14 +42,14 @@ const Vegan = ({ vegan }) => {
               />
     });
 
-    if (!productsOnDisplay.length) {
-      return <Redirect to='/error' />
-    } else {
+    if (productsOnDisplay.length) {
       return (
         <div className="productContainer">
         {productsOnDisplay}
         </div>
       )
+    } else if (!productsOnDisplay.length) {
+      return <Redirect to='/error' />
     }
 }
 
