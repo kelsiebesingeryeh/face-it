@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
 
 const Eco = ({eco}) => {
+    //problem: upon refresh, data does not persist
+    //(1) localStorage? History? Cache? sessionStorage?
+    //(2) useEffect? 
+    const [productType, setProductType] = useState(eco);
+
     const filterMakeupTypes = eco.map((item) => item["product_type"]);
     const productTypes = filterMakeupTypes.filter(
       (item, index) => filterMakeupTypes.indexOf(item) === index
@@ -49,6 +54,7 @@ const Eco = ({eco}) => {
         </div>
       )
     } else if (!productsOnDisplay.length) {
+      console.log('does eco props exists upon refresh', eco);
       return <Redirect to='/error' />
     }
 }
