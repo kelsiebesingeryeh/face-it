@@ -20,17 +20,17 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
-    fetch("http://localhost:3001/api/v1/makeup")
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          makeup: data,
-        });
-        this.sortByCategory(this.state.makeup);
-      })
-      .catch((err) => console.log("error"));
-  }
+  // componentDidMount(){
+  //   fetch("http://localhost:3001/api/v1/makeup")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       this.setState({
+  //         makeup: data,
+  //       });
+  //       this.sortByCategory(this.state.makeup);
+  //     })
+  //     .catch((err) => console.log("error"));
+  // }
 
 
   sortByCategory = response => {
@@ -66,7 +66,7 @@ class App extends Component {
         <Nav />
         <Route exact path='/' render={() => {
           if(!this.state.makeup.length) {
-            <Redirect to='/error' />
+            return <Redirect to='/error' />
           } else {
             return (
               <div className="App">
