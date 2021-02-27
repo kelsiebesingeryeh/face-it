@@ -2,10 +2,8 @@ import React from 'react';
 import Cosmetic from '../Cosmetic/Cosmetic';
 import './Items.css';
 
-const Items = ({ data, type }) => {
+const Items = ({ data, type, category }) => {
     const cosmeticTypes = data.filter(item => item['product_type'] === type)
-    console.log('data', data)
-    console.log('type', type)
     const cosmeticToDisplay = cosmeticTypes.map(item => {
       return <Cosmetic
       id={item.id}
@@ -15,12 +13,10 @@ const Items = ({ data, type }) => {
       img={item["image_link"]}
       tags={item["tag_list"]}
       productType={item["product_type"]}
+      category={category}
       />
     })
-    //we have filtered arrays; next question ...
-    //map over items (array of objects)
-    //and return an array of details
-    //cosemetic = card
+    
     return (
         <div className="productTypeContainer">
           {cosmeticToDisplay}
