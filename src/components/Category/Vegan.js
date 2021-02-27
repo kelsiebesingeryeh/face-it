@@ -2,12 +2,11 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
+import { Link, Route } from 'react-router-dom';
 
 const Vegan = ({ vegan }) => {
     const filterMakeupTypes = vegan.map((item) => item["product_type"]);
-    const productTypes = filterMakeupTypes.filter(
-      (item, index) => filterMakeupTypes.indexOf(item) === index
-    );
+    const productTypes = filterMakeupTypes.filter((item, index) => filterMakeupTypes.indexOf(item) === index);
 
     const assignUrl = (item) => {
       if(item === 'mascara') {
@@ -39,18 +38,23 @@ const Vegan = ({ vegan }) => {
                 title={item}
                 key={item}
                 img={url}
+                id={item}
+                category={'vegan'}
               />
     });
-
+    
+ 
     if (productsOnDisplay.length) {
       return (
-        <div className="productContainer">
-        {productsOnDisplay}
-        </div>
+          <div className="productContainer">
+            {productsOnDisplay}
+          </div>
       )
-    } else if (!productsOnDisplay.length) {
+    } else {
       return <Redirect to='/error' />
     }
 }
+
+
 
 export default Vegan;

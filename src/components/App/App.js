@@ -8,6 +8,7 @@ import Nav from '../Nav/Nav';
 import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
+import Item from '../Item/Item';
 
 class App extends Component {
   constructor(){
@@ -126,6 +127,60 @@ class App extends Component {
               }
             }}
           />
+
+      <Route
+        exact
+        path='/:category/:type'
+        render={({ match }) => {
+          console.log('match', match)
+          if (
+            match.params.category === "vegan" &&
+            match.params.type === "blush"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "vegan" &&
+            match.params.type === "eyeshadow"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "vegan" &&
+            match.params.type === "foundation"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "vegan" &&
+            match.params.type === "mascara"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "vegan" &&
+            match.params.type === "bronzer"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "vegan" &&
+            match.params.type === "eyeliner"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "vegan" &&
+            match.params.type === "lipstick"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "vegan" &&
+            match.params.type === "lip_liner"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "vegan" &&
+            match.params.type === "nail_polish"
+          ) {
+            return <Item />;
+          }
+        }}
+        />
 
       <Route
         exact
