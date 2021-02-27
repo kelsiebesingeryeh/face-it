@@ -1,0 +1,28 @@
+.loading-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+    height: 100vh;
+    padding: 4em 4em 0 4em;
+    background:#1F0800;
+    background-position: center;
+    background-size: 150%;
+    box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8),
+        -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
+    border-radius: 7px;
+  }
+
+
+  .loading-text {
+    color: #F4E9E1;
+    background-color:#1F0800;
+    margin: 2em;
+    text-align: center;
+    width:40vw;
+    padding: 1em;
+    border-radius: 7px;
+  }
+
+  
