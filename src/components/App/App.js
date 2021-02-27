@@ -9,7 +9,6 @@ import LoadingMessage from '../Loading/Loading';
 import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
-import LoadingImg from '../LoadingImg/LoadingImg';
 
 class App extends Component {
   constructor(){
@@ -19,13 +18,12 @@ class App extends Component {
       vegan: [],
       allergenFriendly: [],
       eco: [],
-      isFetching: false, 
+      isFetching: true, 
       error: false
     }
   }
 
   componentDidMount(){
-    this.setState({isFetching: true});
     fetch("http://localhost:3001/api/v1/makeup")
       .then((response) => response.json())
       .then((data) => {
@@ -36,7 +34,7 @@ class App extends Component {
         this.setState({isFetching: false});
       })
       .catch((err) => {
-        this.setState({error: true})
+        this.setState({error: true, isFetching: false})
         console.log("error")
       });
   }
