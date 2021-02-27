@@ -44,9 +44,12 @@ const AllergenFriendly = ({ allergenFriendly }) => {
 
     if (productsOnDisplay.length) {
       return (
-        <div className="productContainer">
-        {productsOnDisplay}
-        </div>
+        <React.Fragment>
+          <h2 className="titleContainer">Allergen Friendly</h2>
+          <div className="productContainer">
+            {productsOnDisplay}
+          </div>
+        </React.Fragment>
       )
     } else if (!productsOnDisplay.length) {
       return <Redirect to='/error' />
