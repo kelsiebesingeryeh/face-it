@@ -8,7 +8,7 @@ const Cosmetic = ({name, brand, img, tags, productType, id, category}) => {
   return (
     <Link to={`/${category}/${productType}/${id}`}>
       <article className="cosmeticCard">
-        <img src={img} alt={name} className="cosmeticCardImage"></img>
+        <img src={img} alt={name} className="cosmeticCardImage" id={id}></img>
         <p className="cosmeticDetail">
           <strong>{brand}</strong>
         </p>

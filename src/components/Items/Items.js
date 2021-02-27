@@ -16,7 +16,7 @@ const Items = ({ data, type, category }) => {
       category={category}
       />
     })
-    
+
     return (
         <div className="productTypeContainer">
           {cosmeticToDisplay}
