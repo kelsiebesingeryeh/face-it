@@ -14,7 +14,7 @@ const Items = ({ data, type }) => {
       brand={item.brand}
       img={item["image_link"]}
       tags={item["tag_list"]}
-      productType={item["product_type"]} 
+      productType={item["product_type"]}
       />
     })
     //we have filtered arrays; next question ...
