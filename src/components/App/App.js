@@ -45,11 +45,13 @@ class App extends Component {
   }
 
   searchMakeup = userInput => {
+    if(userInput !== '') {
     const filterMakeupWithoutBrand = this.state.makeup.filter(item => item.brand)
     const filteredMakeup = filterMakeupWithoutBrand.filter(item => {
       return item.brand.toLowerCase().includes(userInput)
     })
     this.setState({filteredMakeup: filteredMakeup, isSearching: true})
+    }
   }
   
   sortByCategory = response => {
@@ -73,7 +75,7 @@ class App extends Component {
         item["tag_list"].includes("alcohol free") ||
         item["tag_list"].includes("silicone free")
     )
-
+    this.setState({ isSearching: false, filteredItems: [] })
     this.setState({ vegan: vegan})
     this.setState({ eco: eco})
     this.setState({ allergenFriendly: allergenFriendly});
