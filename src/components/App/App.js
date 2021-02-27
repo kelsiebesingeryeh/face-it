@@ -8,6 +8,7 @@ import Nav from '../Nav/Nav';
 import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
+import Form from '../Form/Form';
 
 class App extends Component {
   constructor(){
@@ -16,7 +17,8 @@ class App extends Component {
       makeup: [],
       vegan: [],
       allergenFriendly: [],
-      eco: []
+      eco: [],
+      filteredMakeup: []
     }
   }
 
@@ -31,8 +33,14 @@ class App extends Component {
       })
       .catch((err) => console.log("error"));
   }
-
-
+  searchMakeup = userInput => {
+    console.log(userInput)
+    const filteredMakeup = this.state.makeup.filter(item => {
+      return item.brand.toLowerCase().includes(userInput.toLowerCase())
+    })
+    this.setState({filteredMakeup: filteredMakeup})
+    console.log(this.state.filteredMakeup)
+  }
   sortByCategory = response => {
     const vegan = response.filter(item => item["tag_list"].includes('Vegan'));
     const eco = response.filter(
@@ -64,6 +72,7 @@ class App extends Component {
     return (
       <main>
         <Nav />
+        <Form searchMakeup={this.searchMakeup}/>
         <Route exact path='/' render={() => {
           if(!this.state.makeup.length) {
             return <Redirect to='/error' />
