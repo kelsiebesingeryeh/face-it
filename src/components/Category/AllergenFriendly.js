@@ -35,11 +35,12 @@ const AllergenFriendly = ({ allergenFriendly }) => {
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
-      return <Type
-                title={item}
-                key={item}
-                img={url}
-              />
+      return <Type 
+        title={item} 
+        key={item} 
+        img={url} 
+        category={"allergenFriendly"} 
+      />;
     });
 
     if (productsOnDisplay.length) {

@@ -1,0 +1,6 @@
+.productTypeContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .5rem;
+    padding: 1.25rem;
+}
