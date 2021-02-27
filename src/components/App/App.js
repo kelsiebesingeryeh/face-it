@@ -227,11 +227,56 @@ class App extends Component {
             match.params.type === "eyebrow"
           ) {
             return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "blush"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "eyeshadow"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "foundation"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "mascara"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "bronzer"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "eyeliner"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "lipstick"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "lip_liner"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "allergenFriendly" &&
+            match.params.type === "nail_polish"
+          ) {
+            return <Item />;
           }
         }}
         />
 
-      <Route
+      <Route 
         exact
         path='/error'
         render={() => <Error />}

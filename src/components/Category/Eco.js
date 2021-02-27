@@ -44,7 +44,8 @@ const Eco = ({eco}) => {
       title={item} 
       key={item} 
       img={url} 
-      category={"eco"} />;
+      category={"eco"} 
+      />;
     });
 
     if (productsOnDisplay.length) {
