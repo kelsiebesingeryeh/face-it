@@ -41,13 +41,13 @@ class App extends Component {
       });
   }
   searchMakeup = userInput => {
-    console.log(userInput)
-    const filteredMakeup = this.state.makeup.filter(item => {
-      return item.brand.toLowerCase().includes(userInput.toLowerCase())
+    const filterMakeupWithoutBrand = this.state.makeup.filter(item => item.brand)
+    const filteredMakeup = filterMakeupWithoutBrand.filter(item => {
+      return item.brand.toLowerCase().includes(userInput)
     })
     this.setState({filteredMakeup: filteredMakeup})
-    console.log(this.state.filteredMakeup)
   }
+  
   sortByCategory = response => {
     const vegan = response.filter(item => item["tag_list"].includes('Vegan'));
     const eco = response.filter(
