@@ -3,8 +3,8 @@ import './Form.css';
 
 const Form = ({searchMakeup}) => {
     const [userInput, setUserInput] = useState('');
-    const updateForm = (event) => {
-        setUserInput(event.target.value.toLowerCase())
+const updateForm = (event) => {
+    setUserInput(event.target.value.toLowerCase())
     }
 
     const filterSearchMakeup = (event) => {
@@ -27,5 +27,6 @@ const Form = ({searchMakeup}) => {
         </form>
     )
 }
+//We need to add some way to clear the search results and return to home 
 
 export default Form;
