@@ -13,17 +13,17 @@ const Form = ({searchMakeup}) => {
         setUserInput('');
     }
     return (
-        <form className='search-form'>
+        <form className='searchForm'>
             <input
                 type='text'
-                placeholder='Search Makeup'
+                placeholder='Search Makeup by Brand'
                 value={userInput}
                 onChange={updateForm}
                 aria-label='Search Makeup Items'
                 aria-required='true'
             >
             </input>
-            <button onClick={filterSearchMakeup} className='search-button'>Search</button>
+            <button onClick={filterSearchMakeup} className='searchButton'>Search</button>
         </form>
     )
 }
