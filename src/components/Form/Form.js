@@ -4,12 +4,13 @@ import './Form.css';
 const Form = ({searchMakeup}) => {
     const [userInput, setUserInput] = useState('');
     const updateForm = (event) => {
-        setUserInput(event.target.value)
+        setUserInput(event.target.value.toLowerCase())
     }
 
-    const filterSearchMakeup = (event, userInput) => {
+    const filterSearchMakeup = (event) => {
         event.preventDefault();
-        searchMakeup(userInput)
+        searchMakeup(userInput);
+        setUserInput('');
     }
     return (
         <form className='search-form'>
