@@ -10,6 +10,7 @@ import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
 import Items from '../Items/Items';
+import Details from '../Details/Details';
 
 class App extends Component {
   constructor(){
@@ -393,6 +394,12 @@ class App extends Component {
           }
         }}
         />
+
+      <Route 
+        exact
+        path='/:category/:type/:id'
+        render={() => <Details />} 
+      />
 
       <Route
         exact
