@@ -132,7 +132,6 @@ class App extends Component {
         exact
         path='/:category/:type'
         render={({ match }) => {
-          console.log('match', match)
           if (
             match.params.category === "vegan" &&
             match.params.type === "blush"
@@ -176,6 +175,56 @@ class App extends Component {
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "nail_polish"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "blush"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "eyeshadow"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "foundation"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "mascara"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "bronzer"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "eyeliner"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "lipstick"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "lip_liner"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "nail_polish"
+          ) {
+            return <Item />;
+          } else if (
+            match.params.category === "eco" &&
+            match.params.type === "eyebrow"
           ) {
             return <Item />;
           }

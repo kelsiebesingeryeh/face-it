@@ -40,11 +40,11 @@ const Eco = ({eco}) => {
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
-      return <Type
-                title={item}
-                key={item}
-                img={url}
-              />
+      return <Type 
+      title={item} 
+      key={item} 
+      img={url} 
+      category={"eco"} />;
     });
 
     if (productsOnDisplay.length) {
