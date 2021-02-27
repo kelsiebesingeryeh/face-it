@@ -22,7 +22,7 @@ const Items = ({ data, type }) => {
     //and return an array of details
     //cosemetic = card
     return (
-        <div className="productContainer">
+        <div className="productTypeContainer">
           {cosmeticToDisplay}
         </div>
     )

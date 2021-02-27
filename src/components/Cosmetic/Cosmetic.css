@@ -1,0 +1,41 @@
+.cosmeticCardTitle {
+    border: solid 1px #D1925C;
+    font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    width: 80vw;
+}
+
+.cosmeticCard {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid black;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.cosmeticCardImage {
+   width: 100%;
+   object-fit: contain;
+   /* height: 11rem; */
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+}
+
+/* .categoryProductType {
+    background-position: center;
+    background-size: cover;
+    border: 6px solid white;
+    box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 25vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+} */
