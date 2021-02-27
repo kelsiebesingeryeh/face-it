@@ -11,6 +11,7 @@ import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
 import Form from '../Form/Form';
 import Items from '../Items/Items';
+import SearchResults from '../SearchResults/SearchResults';
 
 class App extends Component {
   constructor(){
@@ -22,7 +23,8 @@ class App extends Component {
       eco: [],
       filteredMakeup: [],
       isFetching: true, 
-      error: false
+      isSearching: false,
+      error: false,
     }
   }
 
@@ -41,12 +43,13 @@ class App extends Component {
         console.log("error")
       });
   }
+
   searchMakeup = userInput => {
     const filterMakeupWithoutBrand = this.state.makeup.filter(item => item.brand)
     const filteredMakeup = filterMakeupWithoutBrand.filter(item => {
       return item.brand.toLowerCase().includes(userInput)
     })
-    this.setState({filteredMakeup: filteredMakeup})
+    this.setState({filteredMakeup: filteredMakeup, isSearching: true})
   }
   
   sortByCategory = response => {
@@ -71,9 +74,9 @@ class App extends Component {
         item["tag_list"].includes("silicone free")
     )
 
-    this.setState({ vegan: vegan })
-    this.setState({ eco: eco })
-    this.setState({ allergenFriendly: allergenFriendly });
+    this.setState({ vegan: vegan})
+    this.setState({ eco: eco})
+    this.setState({ allergenFriendly: allergenFriendly});
   }
 
   render() {
@@ -82,6 +85,7 @@ class App extends Component {
         <Nav />
         <Form searchMakeup={this.searchMakeup}/>
         {this.state.isFetching && <LoadingMessage />}
+        {this.state.filteredMakeup && this.state.isSearching && <SearchResults filteredItems={this.state.filteredMakeup}/>}
         <Route exact path='/' render={() => {
           if(!this.state.makeup.length && this.state.error) {
             return <Redirect to='/error' />
