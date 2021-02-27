@@ -8,6 +8,8 @@ const Vegan = ({ vegan }) => {
     const filterMakeupTypes = vegan.map((item) => item["product_type"]);
     const productTypes = filterMakeupTypes.filter((item, index) => filterMakeupTypes.indexOf(item) === index);
 
+    //filter through for blush to make blush array
+
     const assignUrl = (item) => {
       if(item === 'mascara') {
         return 'https://images.unsplash.com/photo-1512207128881-1baee87126fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=899&q=80'
@@ -34,6 +36,7 @@ const Vegan = ({ vegan }) => {
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
+      //do we pass down the blushArray here? to give to Items?
       return <Type
                 title={item}
                 key={item}
@@ -42,8 +45,8 @@ const Vegan = ({ vegan }) => {
                 category={'vegan'}
               />
     });
-    
- 
+
+
     if (productsOnDisplay.length) {
       return (
           <div className="productContainer">

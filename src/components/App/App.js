@@ -8,7 +8,7 @@ import Nav from '../Nav/Nav';
 import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
-import Item from '../Item/Item';
+import Items from '../Items/Items';
 
 class App extends Component {
   constructor(){
@@ -136,147 +136,231 @@ class App extends Component {
             match.params.category === "vegan" &&
             match.params.type === "blush"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='blush'
+                    />;
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "eyeshadow"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='eyeshadow'
+                    />;
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "foundation"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='foundation'
+                    />;
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "mascara"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='mascara'
+                    />;
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "bronzer"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='bronzer'
+                    />;
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "eyeliner"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='eyeliner'
+                    />;
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "lipstick"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='lipstick'
+                    />;
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "lip_liner"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='lip_liner'
+                    />;
           } else if (
             match.params.category === "vegan" &&
             match.params.type === "nail_polish"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.vegan}
+                      type='nail_polish'
+                    />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "blush"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='blush'
+                    />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "eyeshadow"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='eyeshadow'
+                  />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "foundation"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='foundation'
+                    />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "mascara"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='mascara'
+                    />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "bronzer"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='bronzer'
+                  />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "eyeliner"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='eyeliner'
+                    />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "lipstick"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='lipstick'
+                    />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "lip_liner"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='lip_liner'
+                  />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "nail_polish"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='nail_polish'
+                   />;
           } else if (
             match.params.category === "eco" &&
             match.params.type === "eyebrow"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.eco}
+                      type='eyebrow'
+                   />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "blush"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='blush'
+                   />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "eyeshadow"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='eyeshadow'
+                    />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "foundation"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='foundation'
+                    />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "mascara"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='mascara'
+                    />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "bronzer"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='bronzer'
+                    />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "eyeliner"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='eyeliner'
+                    />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "lipstick"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='lipstick'
+                    />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "lip_liner"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='lip_liner'
+                    />;
           } else if (
             match.params.category === "allergenFriendly" &&
             match.params.type === "nail_polish"
           ) {
-            return <Item />;
+            return <Items
+                      data={this.state.allergenFriendly}
+                      type='nail_polish'
+                    />;
           }
         }}
         />
 
-      <Route 
+      <Route
         exact
         path='/error'
         render={() => <Error />}
