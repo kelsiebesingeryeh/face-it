@@ -2,7 +2,7 @@ describe('FaceIt', () => {
   //Please have the local server running for the intercepts to run accurately
   const baseURL = 'http://localhost:3000/';
 
-  describe.only('Home', () => {
+  describe('Home', () => {
     beforeEach(() => {
       cy.fixture('mockData.json')
         .then(makeup => {
@@ -27,7 +27,7 @@ describe('FaceIt', () => {
 
   })
 
-  describe('Nav Bar', () => {
+  describe.only('Nav Bar', () => {
     beforeEach(() => {
       cy.fixture('mockData.json')
         .then(makeup => {
@@ -51,17 +51,17 @@ describe('FaceIt', () => {
         .get('.App').should('be.visible')
     })
 
-    it('Should navigate eco page', () => {
-
+    //Add checks for contents 
+    it.only('Should navigate to the eco page', () => {
+      cy.get('nav').contains('Eco').click()
     })
 
-    it('Should navigate allergen friendly page', () => {
-
+    it('Should navigate to the allergen friendly page', () => {
+      cy.get('nav').contains('Allergen Friendly').click()
     })
 
-    it('Should navigate to vegan page', () => {
-
+    it('Should navigate to the vegan page', () => {
+      cy.get('nav').contains('Vegan').click()
     })
   })
-
 })
