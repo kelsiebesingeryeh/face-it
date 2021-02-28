@@ -93,6 +93,7 @@ describe('FaceIt', () => {
       cy.get('.App section a article h3').contains('Vegan').click()
         .get('div a article h3').contains('blush').click()
         .location('pathname').should('eq', '/vegan/blush')
+        .get('.productTypeContainer').should('be.visible')
     })
   })
 })
