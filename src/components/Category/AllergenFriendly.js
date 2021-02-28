@@ -50,7 +50,7 @@ const AllergenFriendly = ({ allergenFriendly }) => {
           <div className='descriptionContainer'>
             <h3 className='defintionHeading'>What is Allergen Friendly?</h3>
               <p className='categoryDefintion'>
-              Products that are labeled free of common allergens that may be likely to trigger allergic reactions: <bold>Dairy Free, Gluten Free, Hypoallergenic, Peanut Free, and silicone free</bold>
+              Products that are labeled free of common allergens that may be likely to trigger allergic reactions: Dairy Free, Gluten Free, Hypoallergenic, Peanut Free, and silicone free>
               </p>
             <h3 className='descriptionHeading'>Why choose Allergen Friendly?</h3>
               <p className='categoryDescription'>
