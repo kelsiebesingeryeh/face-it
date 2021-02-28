@@ -6,7 +6,6 @@ describe('FaceIt', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
-          console.log(makeup);
           cy.intercept('http://localhost:3001/api/v1/makeup/', {
             body: makeup
           })
@@ -35,11 +34,10 @@ describe('FaceIt', () => {
     })
   })
 
-  describe('Nav Bar', () => {
+  describe.skip('Nav Bar', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
-          console.log(makeup);
           cy.intercept('http://localhost:3001/api/v1/makeup/', {
             body: makeup
           })
@@ -79,7 +77,6 @@ describe('FaceIt', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
-          console.log(makeup);
           cy.intercept('http://localhost:3001/api/v1/makeup/', {
             body: makeup
           })
@@ -87,8 +84,15 @@ describe('FaceIt', () => {
       cy.visit(baseURL)
     })
 
-    it('Should be able to click into a category', () => {
+    it('Should be able to click into a category from home', () => {
+      cy.get('.App section a article h3').contains('Vegan').click()
+        .location('pathname').should('eq', '/vegan')
+    })
 
+    it('Should be able to click into a displayed type of makeup product from a category page', () => {
+      cy.get('.App section a article h3').contains('Vegan').click()
+        .get('div a article h3').contains('blush').click()
+        .location('pathname').should('eq', '/vegan/blush')
     })
   })
 })
