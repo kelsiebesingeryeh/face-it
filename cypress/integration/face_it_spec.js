@@ -73,7 +73,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe('Category', () => {
+  describe('From Category into Type and Items', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -93,6 +93,11 @@ describe('FaceIt', () => {
       cy.get('.App section a article h3').contains('Vegan').click()
         .get('div a article h3').contains('blush').click()
         .location('pathname').should('eq', '/vegan/blush')
+    })
+
+    it('Should display avaliable items', () => {
+      cy.get('.App section a article h3').contains('Vegan').click()
+        .get('div a article h3').contains('blush').click()
         .get('.productTypeContainer').should('be.visible')
     })
   })
