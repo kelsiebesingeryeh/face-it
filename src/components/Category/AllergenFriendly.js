@@ -63,8 +63,8 @@ const AllergenFriendly = ({ allergenFriendly }) => {
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.healthline.com/health/hypoallergenic-makeup'>Healthline</a>
-                <a href='https://www.fda.gov/cosmetics/cosmetics-labeling-claims/hypoallergenic-cosmetics'>FDA.gov</a>
+                <a href='https://www.healthline.com/health/hypoallergenic-makeup' target="_blank">Healthline</a>
+                <a href='https://www.fda.gov/cosmetics/cosmetics-labeling-claims/hypoallergenic-cosmetics' target="_blank">FDA.gov</a>
               </div>
           </div>
         </section>

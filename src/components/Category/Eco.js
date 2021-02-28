@@ -68,12 +68,12 @@ const Eco = ({eco}) => {
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.certclean.com/about_us/'>CertClean</a>
-                <a href='https://www.ewg.org/ewgverified/about-the-mark.php'>EWG Verified</a>
-                <a href='https://www.ecocert.com/en-US/certification-detail/natural-and-organic-cosmetics-cosmos'>EcoCert</a>
-                <a href='https://www.nongmoproject.org/gmo-facts/'>Non-GMO</a>
-                <a href='https://www.usda.gov/topics/organic'>USDA Organic</a>
-                <a href='https://www.purpicks.com/aboutus/'>purpicks</a>
+                <a href='https://www.certclean.com/about_us/' target="_blank">CertClean</a>
+                <a href='https://www.ewg.org/ewgverified/about-the-mark.php' target="_blank">EWG Verified</a>
+                <a href='https://www.ecocert.com/en-US/certification-detail/natural-and-organic-cosmetics-cosmos' target="_blank">EcoCert</a>
+                <a href='https://www.nongmoproject.org/gmo-facts/' target="_blank">Non-GMO</a>
+                <a href='https://www.usda.gov/topics/organic' target="_blank">USDA Organic</a>
+                <a href='https://www.purpicks.com/aboutus/' target="_blank">purpicks</a>
               </div>
           </div>
         </section>

@@ -69,9 +69,9 @@ const Vegan = ({ vegan }) => {
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.nytimes.com/2019/02/26/style/why-you-should-care-about-vegan-beauty.html'>New York Times</a>
-                <a href='https://www.piperberry.com/blogs/clean-beauty-blog/9-excellent-reasons-to-start-using-vegan-beauty-products'>Piperberry</a>
-                <a href='https://www.cosmopolitan.com/uk/beauty-hair/makeup/a45915/vegan-makeup/'>Cosmopolitan Magazine</a>
+                <a href='https://www.nytimes.com/2019/02/26/style/why-you-should-care-about-vegan-beauty.html' target="_blank">New York Times</a>
+                <a href='https://www.piperberry.com/blogs/clean-beauty-blog/9-excellent-reasons-to-start-using-vegan-beauty-products' target="_blank">Piperberry</a>
+                <a href='https://www.cosmopolitan.com/uk/beauty-hair/makeup/a45915/vegan-makeup/' target="_blank">Cosmopolitan Magazine</a>
               </div>
           </div>
           
