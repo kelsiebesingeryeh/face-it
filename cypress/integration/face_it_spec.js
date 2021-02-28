@@ -4,7 +4,7 @@ describe('FaceIt', () => {
 
   describe('Home', () => {
     beforeEach(() => {
-      cy.fixture('mockData.json')
+      cy.fixture('mock.json')
         .then(makeup => {
           console.log(makeup);
           cy.intercept('http://localhost:3001/api/v1/makeup/', {
@@ -30,15 +30,14 @@ describe('FaceIt', () => {
     it('Should have a footer with links', () => {
       cy.get('footer').should('be.visible');
       cy.get('footer div div p').contains('Kelsie')
-      //edit for images in links?
-      cy.get('footer div div div a')
       cy.get('footer div div div a').should('have.attr', 'href').should('be.equal', 'https://github.com/kelsiebesingeryeh/')
+      cy.get('footer div div div a img')
     })
   })
 
   describe('Nav Bar', () => {
     beforeEach(() => {
-      cy.fixture('mockData.json')
+      cy.fixture('mock.json')
         .then(makeup => {
           console.log(makeup);
           cy.intercept('http://localhost:3001/api/v1/makeup/', {
@@ -60,23 +59,25 @@ describe('FaceIt', () => {
         .get('.App').should('be.visible')
     })
 
-    //Add checks for contents
     it('Should navigate to the eco page', () => {
       cy.get('nav').contains('Eco').click()
+        .location('pathname').should('eq', '/eco')
     })
 
     it('Should navigate to the allergen friendly page', () => {
       cy.get('nav').contains('Allergen Friendly').click()
+        .location('pathname').should('eq', '/allergenFriendly')
     })
 
     it('Should navigate to the vegan page', () => {
       cy.get('nav').contains('Vegan').click()
+        .location('pathname').should('eq', '/vegan')
     })
   })
 
-  describe('Nav Bar', () => {
+  describe('Category', () => {
     beforeEach(() => {
-      cy.fixture('mockData.json')
+      cy.fixture('mock.json')
         .then(makeup => {
           console.log(makeup);
           cy.intercept('http://localhost:3001/api/v1/makeup/', {
@@ -87,7 +88,7 @@ describe('FaceIt', () => {
     })
 
     it('Should be able to click into a category', () => {
-      
+
     })
   })
 })
