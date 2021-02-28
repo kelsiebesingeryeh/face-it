@@ -1,0 +1,12 @@
+.detailsPage {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+}
+
+.cosmeticDetailsImage {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
