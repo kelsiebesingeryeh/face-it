@@ -56,7 +56,7 @@ const Vegan = ({ vegan }) => {
               <p className='categoryDefintion'>
                 Products that are free of animal ingredients.
               </p>
-            <h3 className='descriptionHeading'>Why choose vegan?</h3>
+            <h3 className='descriptionHeading'>Why choose Vegan?</h3>
               <p className='categoryDescription'>
               Many products contain animal products that include dairy, honey, or beeswax, as you might expect.  It is also common for beauty products to include urine, ground hooves, insects, sheep wool, and other by-products one normally wouldn’t think of when purchasing their beauty products.
               <br></br>
