@@ -6,6 +6,7 @@ __updated: 02/27/2020__
 - [Introduction](#Introduction)
 - [Features](#Features)
 - [Technologies](#Techologies)
+- [Artist Credits](#Artist-Credits)
 - [Contributions](#Contributions)
 - [Authors](#Authors)
 ---
@@ -132,6 +133,18 @@ Testing the UX & UI of our app.
 - Webpack
 - WAVE for accessibility auditing
 - Lighthouse for PWA & accessibility auditing
+
+## Artist Credits
+Thanks to the following artists from [Unsplash](https://unsplash.com/):
+- @noahbuscher
+- @brookelark
+- @daniele_franchi 
+- @kellysikkema
+- @igorrand
+- @joannakosinska
+- @raphaellovaski
+- @pesce
+- @laurachouette
 
 ## Future Iterations
 
