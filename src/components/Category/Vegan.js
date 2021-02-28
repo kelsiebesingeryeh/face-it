@@ -49,9 +49,33 @@ const Vegan = ({ vegan }) => {
 
     if (productsOnDisplay.length) {
       return (
-          <div className="productContainer">
+        <section className='category'>
+          <h2 className='categoryTitle'>Vegan</h2>
+          <div className='descriptionContainer'>
+            <h3 className='defintionHeading'>What is Vegan?</h3>
+              <p className='categoryDefintion'>
+                Products that are free of animal ingredients.
+              </p>
+            <h3 className='descriptionHeading'>Why choose vegan?</h3>
+              <p className='categoryDescription'>
+              Many products contain animal products that include dairy, honey, or beeswax, as you might expect.  It is also common for beauty products to include urine, ground hooves, insects, sheep wool, and other by-products one normally wouldn’t think of when purchasing their beauty products.
+              <br></br>
+              A vegan diet favors plant-based food, so naturally, vegan products are more likely to contain natural, plant-based ingredients. Vegan packaging also tends to be more environmentally-friendly, as these products are usually geared towards those who value healthy and conscious living.
+              </p>
+          </div>
+          <div className='productContainer'>  
             {productsOnDisplay}
           </div>
+          <div className='sourcesContainer'>
+            <h3 className='sourcesTitle'>Sources</h3>
+              <div className='linkContainer'>
+                <a href='https://www.nytimes.com/2019/02/26/style/why-you-should-care-about-vegan-beauty.html'>New York Times</a>
+                <a href='https://www.piperberry.com/blogs/clean-beauty-blog/9-excellent-reasons-to-start-using-vegan-beauty-products'>Piperberry</a>
+                <a href='https://www.cosmopolitan.com/uk/beauty-hair/makeup/a45915/vegan-makeup/'>Cosmopolitan Magazine</a>
+              </div>
+          </div>
+          
+        </section>
       )
     } else {
       return <Redirect to='/error' />
