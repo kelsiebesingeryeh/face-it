@@ -2,7 +2,7 @@ describe('FaceIt', () => {
   //Please have the local server running for the intercepts to run accurately
   const baseURL = 'http://localhost:3000/';
 
-  describe('Home', () => {
+  describe.skip('Home', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -73,7 +73,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe('From Category into Type and Items', () => {
+  describe.skip('Category into Type and Items', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -101,4 +101,32 @@ describe('FaceIt', () => {
         .get('.productTypeContainer').should('be.visible')
     })
   })
+
+  describe('Loading', () => {
+    beforeEach(() => {
+      cy.fixture('mock.json')
+        .then(makeup => {
+          cy.intercept('http://localhost:3001/api/v1/makeup/', {
+            body: makeup
+          })
+        });
+      cy.visit(baseURL)
+    })
+    it('Should display a loading message on home', () => {
+      cy.get('.loading-message').should('be.visible')
+    })
+
+    it('Should display a loading message when naviagting to category', () => {
+      //do we need one here? And at other locations, too?
+    })
+
+  })
+
+  describe.skip('Error Message', () => {
+      it('Should display an error message on home if there no data to display', () => {
+        //Where else besides @ home do we want to have an error redirect?
+        //Refactor catch & error status? 
+    })
+  })
+
 })
