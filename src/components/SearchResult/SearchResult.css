@@ -1,0 +1,21 @@
+.searchImage {
+   background-position: center;
+   background-size: cover;
+   border: 6px solid white;
+   box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.5),
+    -6px -6px 16px 0 rgba(223, 219, 219, 0.5);
+   width: 100%;
+   object-fit: contain;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   margin-bottom: 1rem;
+   background-color: white;
+   max-width: 65%;
+   max-height: 60%;
+   padding: 1rem;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 1rem;
+}
