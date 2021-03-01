@@ -1,5 +1,6 @@
 import React from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
+import './Details.css';
 
 const Details = ({ makeup, id }) => {
     const findProduct = () => {

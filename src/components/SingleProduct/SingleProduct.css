@@ -1,12 +1,60 @@
 .detailsPage {
         display: flex;
+        align-items: center;
         flex-direction: column;
-        align-items: flex-start;
         padding: 1rem;
+        width: 80vw;
 }
 
 .cosmeticDetailsImage {
-    width: 100%;
+    background-color: white;
+    max-width: 65%;
+    max-height: 60%;
     object-fit: contain;
     margin-bottom: 1rem;
+    background-position: center;
+    background-size: cover;
+    border: 6px solid white;
+    box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8),
+        -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.detailsPageWrapper {
+    background-color: white;
+    margin-bottom: 1rem;
+    background-position: center;
+    background-size: cover;
+    border: 6px solid white;
+    box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.5),
+        -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+.singleProductBrand {
+    margin-top: 0;
+    border: solid 2px #1F0800;
+    width: 66%;
+}
+.singleProductDescriptionWrapper {
+    border: solid 1px #5E6353;
+    padding: 0.5em;
+}
+
+.singleProductTitle {
+    margin-bottom: 0;
+    width: 60%;
+}
+
+.tags {
+    border: solid 1px #D1925C;
 }
