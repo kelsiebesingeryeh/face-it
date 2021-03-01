@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const SearchResult = ({img, name, id, brand, tags, productType}) => {
     const styledTags = tags.join(', ');
-    console.log(styledTags)
     return (
         <Link to={`/:id`}>
             <article className="cosmeticCard">
