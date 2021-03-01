@@ -89,22 +89,6 @@ class App extends Component {
         <Form searchMakeup={this.searchMakeup}/>
         {this.state.isFetching && <LoadingMessage />}
         {this.state.filteredMakeup && this.state.isSearching && <SearchResults filteredItems={this.state.filteredMakeup}/>}
-        <Route exact path='/' render={() => {
-          if(!this.state.makeup.length && this.state.error) {
-            return <Redirect to='/error' />
-          } else {
-            return (
-              <div className="App">
-                <div className="titleContainer">
-                  <h1>FaceIt</h1>
-                  <Logo />
-                  <h2 className="missionStatement">Discover beauty products that compliment your lifestyle.</h2>
-                </div>
-              </div>
-            )
-          }
-        }}
-        />
         <Route
           exact
           path="/"
