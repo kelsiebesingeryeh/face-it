@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchResult from '../SearchResult/SearchResult';
 import './SearchResults.css';
 
 //when search button is clicked, the search method is triggered
@@ -8,9 +9,16 @@ import './SearchResults.css';
 
 const SearchResults = ({filteredItems}) => {
   const itemsToDisplay = filteredItems.map(item => {
-      return (
-          <h3>{item.brand}</h3>
-      )
+      return <SearchResult
+          id={item.id}
+          key={item.id}
+          name={item.name}
+          brand={item.brand}
+          img={item["image_link"]}
+          tags={item["tag_list"]}
+          productType={item["product_type"]}
+        />
+      
   })
   return (
     <div className="searchResultsContainer">
