@@ -102,7 +102,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe('Items into Cosmetic', () => {
+  describe.skip('Items into Cosmetic', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -122,6 +122,24 @@ describe('FaceIt', () => {
         .get('.detailsPage img').should('be.visible')
         .get('.detailsPage .singleProductDescriptionWrapper').should('be.visible')
         .get('.detailsPage .tags').should('be.visible')
+    })
+  })
+
+  describe('Search Bar', () => {
+    beforeEach(() => {
+      cy.fixture('mock.json')
+        .then(makeup => {
+          cy.intercept('http://localhost:3001/api/v1/makeup/', {
+            body: makeup
+          })
+        });
+      cy.visit(baseURL)
+    })
+
+    it('Should have a functional serach bar', () => {
+      //Type
+      //Search
+      //check result to be equal to expected outcome
     })
   })
 
