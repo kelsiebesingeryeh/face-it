@@ -16,7 +16,7 @@ const updateForm = (event) => {
         <form className='searchForm'>
             <input
                 type='text'
-                placeholder='Search Makeup by Brand'
+                placeholder='Search by Brand or Tag (e.g.: "natural")'
                 value={userInput}
                 onChange={updateForm}
                 aria-label='Search Makeup Items'
