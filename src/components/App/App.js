@@ -9,7 +9,9 @@ import LoadingMessage from '../Loading/Loading';
 import Logo from '../Logo/Logo';
 import Error from '../Error/Error';
 import Footer from '../Footer/Footer';
+import Form from '../Form/Form';
 import Items from '../Items/Items';
+import SearchResults from '../SearchResults/SearchResults';
 import Details from '../Details/Details';
 
 class App extends Component {
@@ -20,8 +22,10 @@ class App extends Component {
       vegan: [],
       allergenFriendly: [],
       eco: [],
+      filteredMakeup: [],
       isFetching: true, 
-      error: false
+      isSearching: false,
+      error: false,
     }
   }
 
@@ -41,7 +45,25 @@ class App extends Component {
       });
   }
 
-
+  searchMakeup = userInput => {
+    if(userInput !== '') {
+    const filteredMakeupTag = [];
+    this.state.makeup.forEach(item => {
+      const tags = item["tag_list"].map(tag => tag.toLowerCase());
+      if(tags.includes(userInput)) {
+        filteredMakeupTag.push(item)
+      }
+    })
+    const filterMakeupWithoutBrand = this.state.makeup.filter(item => item.brand)
+    const filteredMakeupBrand = filterMakeupWithoutBrand.filter(item => {
+      return item.brand.toLowerCase().includes(userInput)
+    })
+    const allFilteredMakeup = filteredMakeupTag.concat(filteredMakeupBrand)
+    const uniqueFilteredMakeup = [...new Set(allFilteredMakeup)]
+    this.setState({filteredMakeup: uniqueFilteredMakeup, isSearching: true})
+    }
+  }
+  
   sortByCategory = response => {
     const vegan = response.filter(item => item["tag_list"].includes('Vegan'));
     const eco = response.filter(
@@ -62,18 +84,20 @@ class App extends Component {
         item["tag_list"].includes("Peanut Free Product") ||
         item["tag_list"].includes("alcohol free") ||
         item["tag_list"].includes("silicone free")
-    )
-
-    this.setState({ vegan: vegan })
-    this.setState({ eco: eco })
-    this.setState({ allergenFriendly: allergenFriendly });
+    );
+    this.setState({ isSearching: false, filteredItems: [] })
+    this.setState({ vegan: vegan})
+    this.setState({ eco: eco})
+    this.setState({ allergenFriendly: allergenFriendly});
   }
 
   render() {
     return (
       <main>
         <Nav />
+        <Form searchMakeup={this.searchMakeup}/>
         {this.state.isFetching && <LoadingMessage />}
+        {this.state.filteredMakeup && this.state.isSearching && <SearchResults filteredItems={this.state.filteredMakeup}/>}
         <Route
           exact
           path="/"
@@ -433,7 +457,8 @@ class App extends Component {
         <Route exact path="/error" render={() => <Error />} />
         <Footer />
       </main>
-    );}
+    );
+  }
 }
 
 export default App;

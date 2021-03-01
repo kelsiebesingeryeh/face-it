@@ -73,7 +73,7 @@ h1 {
 @media screen and (min-width: 800px) {
   .categoryContainer {
     flex-direction: row;
-    height: 70vh;
+    height: 52vh;
   }
   .mainCategory {
     width: 24vw;

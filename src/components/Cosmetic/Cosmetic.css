@@ -8,25 +8,39 @@
 }
 
 .cosmeticCard {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        border: 1px solid black;
-        border-radius: 8px;
-        align-items: center;
-        background: white;
-        padding: 1rem;
-        text-align: center;
-        height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid #1f0800;
+    border-radius: 8px;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    height: 100%;
 }
 
 .cosmeticCardImage {
+   background-position: center;
+   background-size: cover;
+   border: 6px solid white;
+   box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.5),
+       -6px -6px 16px 0 rgba(223, 219, 219, 0.5);
    width: 100%;
    object-fit: contain;
    border-top-left-radius: 8px;
    border-top-right-radius: 8px;
    margin-bottom: 1rem;
+   background-color: white;
+   max-width: 65%;
+   max-height: 60%;
+   padding: 1rem;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 1rem;
 }
 
 .cosmeticDetail {
@@ -34,6 +48,6 @@
 }
 
 .tags {
-    border: 1px solid black;
+    border: 1px solid #1f0800;
     padding: .5rem;
 }
