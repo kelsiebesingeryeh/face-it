@@ -85,10 +85,13 @@ class App extends Component {
         item["tag_list"].includes("alcohol free") ||
         item["tag_list"].includes("silicone free")
     );
-    this.setState({ isSearching: false, filteredItems: [] })
-    this.setState({ vegan: vegan})
-    this.setState({ eco: eco})
-    this.setState({ allergenFriendly: allergenFriendly});
+    this.setState({
+      isSearching: false,
+      filteredItems: [],
+      vegan: vegan,
+      eco: eco,
+      allergenFriendly: allergenFriendly,
+    });
   }
 
   render() {
