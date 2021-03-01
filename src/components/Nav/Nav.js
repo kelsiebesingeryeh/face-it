@@ -10,13 +10,13 @@ const Nav = () => {
             <li>Home</li>
           </Link>
           <div className="categoryNavList">
-            <Link to="eco">
+            <Link to="/eco">
               <li>Eco</li>
             </Link>
-            <Link to="allergenFriendly">
+            <Link to="/allergenFriendly">
               <li>Allergen Friendly</li>
             </Link>
-            <Link to="vegan">
+            <Link to="/vegan">
               <li>Vegan</li>
             </Link>
           </div>

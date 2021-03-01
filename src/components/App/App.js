@@ -138,7 +138,7 @@ class App extends Component {
                       </h2>
                     </div>
                     <section className="categoryContainer">
-                      <Link to="eco">
+                      <Link to="/eco">
                         <article
                           className="mainCategory"
                           style={{
@@ -148,7 +148,7 @@ class App extends Component {
                           <h3 className="mainCategoryText">Eco</h3>
                         </article>
                       </Link>
-                      <Link to="allergenFriendly">
+                      <Link to="/allergenFriendly">
                         <article
                           className="mainCategory"
                           style={{
@@ -160,7 +160,7 @@ class App extends Component {
                           </h3>
                         </article>
                       </Link>
-                      <Link to="vegan">
+                      <Link to="/vegan">
                         <article
                           className="mainCategory"
                           style={{
