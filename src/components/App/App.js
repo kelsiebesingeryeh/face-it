@@ -104,19 +104,16 @@ class App extends Component {
   render() {
     return (
       <main>
-        <Nav />
-        <Form searchMakeup={this.searchMakeup} />
+        <Nav handleClick={this.handleClick} />
         {this.state.isFetching && <LoadingMessage />}
-        {this.state.isSearching && (
-          <button onClick={this.handleClick} className="searchButton">
-            Clear Search Results
-          </button>
-        )}
+        
         <Switch>
           <Route
             exact
             path="/searchResults"
-            render={() => <SearchResults filteredMakeup={this.state.filteredMakeup} />}
+            render={() => (
+              <SearchResults filteredMakeup={this.state.filteredMakeup} />
+              )}
           />
 
           <Route
@@ -124,12 +121,16 @@ class App extends Component {
             path="/"
             render={() => {
               if (!this.state.makeup.length && this.state.error) {
-                return <Redirect to="/error" />
-              } else if (this.state.filteredMakeup.length !== 0 && this.state.isSearching) {
-                return <Redirect to="/searchResults"/>
-              } else {
-                return (
-                  <div className="App">
+                return <Redirect to="/error" />;
+              } else if (
+                this.state.filteredMakeup.length !== 0 &&
+                this.state.isSearching
+                ) {
+                  return <Redirect to="/searchResults" />;
+                } else {
+                  return (
+                    <div className="App">
+                    <Form searchMakeup={this.searchMakeup}/>
                     <div className="titleContainer">
                       <h1>FaceIt</h1>
                       <Logo />
