@@ -118,6 +118,10 @@ describe('FaceIt', () => {
         .get('div a article h3').contains('blush').click()
         .get('div a article').first().click()
         .get('.detailsPage').should('be.visible')
+        .get('.detailsPage h2').contains('Saint Cosmetics Blush')
+        .get('.detailsPage img').should('be.visible')
+        .get('.detailsPage .singleProductDescriptionWrapper').should('be.visible')
+        .get('.detailsPage .tags').should('be.visible')
     })
   })
 
