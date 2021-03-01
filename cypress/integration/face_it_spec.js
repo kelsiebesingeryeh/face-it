@@ -102,7 +102,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe('Loading', () => {
+  describe('Items into Cosmetic', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -112,6 +112,26 @@ describe('FaceIt', () => {
         });
       cy.visit(baseURL)
     })
+
+    it('Should be able to click into an avaliable cosmetic to view its details', () => {
+      cy.get('.App section a article h3').contains('Vegan').click()
+        .get('div a article h3').contains('blush').click()
+        .get('div a article').first().click()
+        .get('.detailsPage').should('be.visible')
+    })
+  })
+
+  describe.skip('Loading', () => {
+    beforeEach(() => {
+      cy.fixture('mock.json')
+        .then(makeup => {
+          cy.intercept('http://localhost:3001/api/v1/makeup/', {
+            body: makeup
+          })
+        });
+      cy.visit(baseURL)
+    })
+
     it('Should display a loading message on home', () => {
       cy.get('.loading-message').should('be.visible')
     })
@@ -123,9 +143,22 @@ describe('FaceIt', () => {
   })
 
   describe.skip('Error Message', () => {
+    //Error testing problem, to test on our server, we must include error message & status codes in our server
+
+    //Error testing can *only* occur on original API, not on mock, local server. Please note url difference, however, it doesn't imply data difference between the two.
       it('Should display an error message on home if there no data to display', () => {
+        cy.fixture('mock.json')
+          .then(() => {
+            cy.intercept('http://localhost:3001/api/v1/makeup/', {
+              statusCode: 404,
+              body: []
+            })
+          });
+        cy.visit('http://makeup-api.herokuapp.com/api/v1/products.json')
+        cy.get('.error-message').should('be.visible')
+
         //Where else besides @ home do we want to have an error redirect?
-        //Refactor catch & error status? 
+        //Refactor catch & error status?
     })
   })
 
