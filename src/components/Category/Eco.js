@@ -50,9 +50,33 @@ const Eco = ({eco}) => {
 
     if (productsOnDisplay.length) {
       return (
-        <div className="productContainer">
-        {productsOnDisplay}
-        </div>
+        <section className='category'>
+          <h2 className='categoryTitle'>Eco</h2>
+          <div className='descriptionContainer'>
+            <h3 className='defintionHeading'>What is Eco?</h3>
+              <p className='categoryDefintion'>
+              Products that are CertClean, EWG Verified, EcoCert, Non-GMO, USDA Organic, purpicks — We’ve defined that products in the "Eco" category are considered to be better for the environment, as determined by these respective organizations.
+              </p>
+            <h3 className='descriptionHeading'>Why choose Eco?</h3>
+              <p className='categoryDescription'>
+              Organizations like CertClean, EcoCert and EWG have already vetted these products for the impact they have on the environment and for the “clean” benefits based on the amount of harmful chemicals that may or may not be present. Find out more information about each certification under "Sources" at the bottom of this page. 
+              </p>
+          </div>
+          <div className='productContainer'>  
+            {productsOnDisplay}
+          </div>
+          <div className='sourcesContainer'>
+            <h3 className='sourcesTitle'>Sources</h3>
+              <div className='linkContainer'>
+                <a href='https://www.certclean.com/about_us/' target="_blank">CertClean</a>
+                <a href='https://www.ewg.org/ewgverified/about-the-mark.php' target="_blank">EWG Verified</a>
+                <a href='https://www.ecocert.com/en-US/certification-detail/natural-and-organic-cosmetics-cosmos' target="_blank">EcoCert</a>
+                <a href='https://www.nongmoproject.org/gmo-facts/' target="_blank">Non-GMO</a>
+                <a href='https://www.usda.gov/topics/organic' target="_blank">USDA Organic</a>
+                <a href='https://www.purpicks.com/aboutus/' target="_blank">purpicks</a>
+              </div>
+          </div>
+        </section>
       )
     } else if (!productsOnDisplay.length) {
       console.log('does eco props exists upon refresh', eco);
