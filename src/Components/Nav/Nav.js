@@ -1,6 +1,7 @@
 import React from 'react';
 import './Nav.css';
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Nav = ({handleClick}) => {
   return (
@@ -26,3 +27,7 @@ const Nav = ({handleClick}) => {
 };
 
 export default Nav;
+
+Nav.propTypes = {
+handleClick: PropTypes.func
+};
