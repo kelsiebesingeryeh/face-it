@@ -46,20 +46,19 @@ class App extends Component {
   }
 
   searchMakeup = userInput => {
+    const filteredByTag = [];
     if(userInput !== '') {
-    const filteredMakeupTag = [];
     this.state.makeup.forEach(item => {
       const tags = item["tag_list"].map(tag => tag.toLowerCase());
       if(tags.includes(userInput)) {
-        filteredMakeupTag.push(item)
+        filteredByTag.push(item)
       }
     })
-    const filterMakeupWithoutBrand = this.state.makeup.filter(item => item.brand)
-    const filteredMakeupBrand = filterMakeupWithoutBrand.filter(item => {
+    const filterWithBrand = this.state.makeup.filter(item => item.brand)
+    const filteredByBrand = filterWithBrand.filter(item => {
       return item.brand.toLowerCase().includes(userInput)
     })
-    const allFilteredMakeup = filteredMakeupTag.concat(filteredMakeupBrand)
-    const uniqueFilteredMakeup = [...new Set(allFilteredMakeup)]
+    const uniqueFilteredMakeup = [...new Set(filteredByTag.concat(filteredByBrand))]
     this.setState({filteredMakeup: uniqueFilteredMakeup, isSearching: true})
     }
   }
