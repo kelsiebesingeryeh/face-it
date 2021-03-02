@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
+import PropTypes from "prop-types";
 
 const Vegan = ({ vegan }) => {
     const filterMakeupTypes = vegan.map((item) => item["product_type"]);
@@ -80,3 +81,7 @@ const Vegan = ({ vegan }) => {
 
 
 export default Vegan;
+
+Vegan.propTypes = {
+  vegan: PropTypes.array,
+};

@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
+import PropTypes from "prop-types";
 
 const Eco = ({eco}) => {
     const filterMakeupTypes = eco.map((item) => item["product_type"]);
@@ -79,3 +80,7 @@ const Eco = ({eco}) => {
 };
 
 export default Eco;
+
+Eco.propTypes = {
+  eco: PropTypes.array,
+};
