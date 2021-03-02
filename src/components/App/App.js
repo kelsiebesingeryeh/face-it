@@ -114,7 +114,15 @@ class App extends Component {
               <SearchResults filteredMakeup={this.state.filteredMakeup} />
               )}
           />
-
+          <Route
+            exact
+            path="/searchResults/:id"
+            render={({ match }) => {
+              return (
+                <Details makeup={this.state.makeup} id={match.params.id} />
+              );
+            }}
+          /> 
           <Route
             exact
             path="/"
@@ -486,7 +494,6 @@ class App extends Component {
               }
             }}
           />
-
           <Route
             exact
             path="/:category/:type/:id"
@@ -495,8 +502,7 @@ class App extends Component {
                 <Details makeup={this.state.makeup} id={match.params.id} />
               );
             }}
-          />
-
+          /> 
           <Route exact path="/error" render={() => <Error />} />
         </Switch>
         <Footer />

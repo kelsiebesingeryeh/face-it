@@ -1,8 +1,6 @@
 import React from 'react';
 import SearchResult from '../SearchResult/SearchResult';
 import './SearchResults.css';
-import {Link} from 'react-router-dom';
-
 const SearchResults = ({ filteredMakeup }) => {
   const itemsToDisplay = filteredMakeup.map((item) => {
     return (
@@ -19,6 +17,7 @@ const SearchResults = ({ filteredMakeup }) => {
   });
 
   return (
+    
       <div className="searchResultsContainer">
         {itemsToDisplay}
       </div>
