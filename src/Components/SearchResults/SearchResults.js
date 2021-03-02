@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchResult from '../SearchResult/SearchResult';
 import './SearchResults.css';
+import PropTypes from "prop-types";
 
 const SearchResults = ({ filteredMakeup }) => {
   const itemsToDisplay = filteredMakeup.map((item) => {
@@ -25,3 +26,7 @@ const SearchResults = ({ filteredMakeup }) => {
 };
 
 export default SearchResults;
+
+SearchResults.propTypes = {
+  filteredMakeup: PropTypes.array,
+};
