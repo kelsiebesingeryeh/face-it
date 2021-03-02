@@ -1,9 +1,9 @@
 .detailsPage {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 1rem;
-        width: 80vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 80vw;
 }
 
 .cosmeticDetailsImage {
@@ -40,11 +40,13 @@
     justify-content: center;
     margin: 1rem;
 }
+
 .singleProductBrand {
     margin-top: 0;
     border: solid 2px #1F0800;
-    width: 66%;
+    width: 60vw;
 }
+
 .singleProductDescriptionWrapper {
     border: solid 1px #5E6353;
     padding: 0.5em;
@@ -52,7 +54,7 @@
 
 .singleProductTitle {
     margin-bottom: 0;
-    width: 60%;
+    width: 60vw;
 }
 
 .tags {

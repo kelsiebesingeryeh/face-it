@@ -46,20 +46,20 @@ class App extends Component {
   }
 
   searchMakeup = userInput => {
+    const filteredByTag = [];
     if(userInput !== '') {
-    const filteredMakeupTag = [];
     this.state.makeup.forEach(item => {
       const tags = item["tag_list"].map(tag => tag.toLowerCase());
       if(tags.includes(userInput)) {
-        filteredMakeupTag.push(item)
+        filteredByTag.push(item)
       }
     })
-    const filterMakeupWithoutBrand = this.state.makeup.filter(item => item.brand)
-    const filteredMakeupBrand = filterMakeupWithoutBrand.filter(item => {
+    const filterWithBrand = this.state.makeup.filter(item => item.brand)
+    const filteredByBrand = filterWithBrand.filter(item => {
       return item.brand.toLowerCase().includes(userInput)
     })
-    const allFilteredMakeup = filteredMakeupTag.concat(filteredMakeupBrand)
-    const uniqueFilteredMakeup = [...new Set(allFilteredMakeup)]
+    const uniqueFilteredMakeup = [...new Set(filteredByTag.concat(filteredByBrand))]
+    console.log(uniqueFilteredMakeup.length)
     this.setState({filteredMakeup: uniqueFilteredMakeup, isSearching: true})
     }
   }
@@ -111,11 +111,19 @@ class App extends Component {
           <Route
             exact
             path="/searchResults"
-            render={() => (
-              <SearchResults filteredMakeup={this.state.filteredMakeup} />
-              )}
+            render={() => {
+               return <SearchResults filteredMakeup={this.state.filteredMakeup} />
+            }}
           />
-
+          <Route
+            exact
+            path="/searchResults/:id"
+            render={({ match }) => {
+              return (
+                <Details makeup={this.state.makeup} id={match.params.id} />
+              );
+            }}
+          /> 
           <Route
             exact
             path="/"
@@ -127,7 +135,16 @@ class App extends Component {
                 this.state.isSearching
                 ) {
                   return <Redirect to="/searchResults" />;
-                } else {
+              } else if(
+                this.state.filteredMakeup.length === 0 && 
+                this.state.isSearching
+                ) {
+                  return (
+                    <div className="searchMessageContainer">
+                      <h2>Sorry! Your search returned no results.</h2>
+                    </div>
+                  )
+              } else  {
                   return (
                     <div className="App">
                     <Form searchMakeup={this.searchMakeup}/>
@@ -496,8 +513,7 @@ class App extends Component {
                 <Details makeup={this.state.makeup} id={match.params.id} />
               );
             }}
-          />
-
+          /> 
           <Route exact path="/error" render={() => <Error />} />
         </Switch>
         <Footer />

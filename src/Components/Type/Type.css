@@ -1,16 +1,24 @@
 .productType {
-    background-position: center;
-    background-size: cover;
-    border: 6px solid white;
-    box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8);
-    padding: 1rem;
-    border-radius: 8px;
-    width: 40vw;
-    height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5rem;
+  background-position: center;
+  background-size: cover;
+  border: 6px solid white;
+  box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.productType:active {
+  box-shadow: 4px 4px 12px 0 #D1925C;
+}
+
+.productType:hover {
+  box-shadow: 4px 4px 12px 0 #A63D10;
 }
 
 h3 {
