@@ -3,10 +3,6 @@ import SearchResult from '../SearchResult/SearchResult';
 import './SearchResults.css';
 import {Link} from 'react-router-dom';
 
-//add a property that changes the state.didsearch to true
-//add a conditional render that evaluates if the didsearch === true, then 
-//how to get back to main view?  how/when to switch didsearch state back to false?
-
 const SearchResults = ({ filteredMakeup }) => {
   const itemsToDisplay = filteredMakeup.map((item) => {
     return (

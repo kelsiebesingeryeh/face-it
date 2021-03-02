@@ -29,6 +29,5 @@ const Form = ({ searchMakeup, handleClick}) => {
     </form>
   );
 };
-//We need to add some way to clear the search results and return to home 
 
 export default Form;
