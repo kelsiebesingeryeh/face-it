@@ -59,6 +59,7 @@ class App extends Component {
       return item.brand.toLowerCase().includes(userInput)
     })
     const uniqueFilteredMakeup = [...new Set(filteredByTag.concat(filteredByBrand))]
+    console.log(uniqueFilteredMakeup.length)
     this.setState({filteredMakeup: uniqueFilteredMakeup, isSearching: true})
     }
   }
@@ -110,9 +111,9 @@ class App extends Component {
           <Route
             exact
             path="/searchResults"
-            render={() => (
-              <SearchResults filteredMakeup={this.state.filteredMakeup} />
-              )}
+            render={() => {
+               return <SearchResults filteredMakeup={this.state.filteredMakeup} />
+            }}
           />
           <Route
             exact
@@ -134,7 +135,16 @@ class App extends Component {
                 this.state.isSearching
                 ) {
                   return <Redirect to="/searchResults" />;
-                } else {
+              } else if(
+                this.state.filteredMakeup.length === 0 && 
+                this.state.isSearching
+                ) {
+                  return (
+                    <div className="searchMessageContainer">
+                      <h2>Sorry! Your search returned no results.</h2>
+                    </div>
+                  )
+              } else  {
                   return (
                     <div className="App">
                     <Form searchMakeup={this.searchMakeup}/>
@@ -494,6 +504,7 @@ class App extends Component {
               }
             }}
           />
+
           <Route
             exact
             path="/:category/:type/:id"
