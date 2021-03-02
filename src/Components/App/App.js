@@ -105,6 +105,7 @@ class App extends Component {
       <main>
         <Nav handleClick={this.handleClick} />
         {this.state.isFetching && <LoadingMessage />}
+        <Route exact path="/error" render={() => <Error />} />
         
         <Switch>
           <Route
@@ -120,8 +121,8 @@ class App extends Component {
             render={({ match }) => {
               return (
                 <Details makeup={this.state.makeup} id={match.params.id} />
-              );
-            }}
+                );
+              }}
           /> 
           <Route
             exact
@@ -143,7 +144,7 @@ class App extends Component {
                       <h2>Sorry! Your search returned no results.</h2>
                     </div>
                   )
-              } else  {
+                } else  {
                   return (
                     <div className="App">
                     <Form searchMakeup={this.searchMakeup}/>
@@ -513,7 +514,6 @@ class App extends Component {
               );
             }}
           /> 
-          <Route exact path="/error" render={() => <Error />} />
         </Switch>
         <Footer />
       </main>

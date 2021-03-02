@@ -39,7 +39,7 @@ const Vegan = ({ vegan }) => {
                 img={url}
                 id={item}
                 category={'vegan'}
-              />
+              />;
     });
 
 
@@ -48,8 +48,8 @@ const Vegan = ({ vegan }) => {
         <section className='category'>
           <h2 className='categoryTitle'>Vegan</h2>
           <div className='descriptionContainer'>
-            <h3 className='defintionHeading'>What is Vegan?</h3>
-              <p className='categoryDefintion'>
+            <h3 className='definitionHeading'>What is Vegan?</h3>
+              <p className='categoryDefinition'>
                 Products that are free of animal ingredients.
               </p>
             <h3 className='descriptionHeading'>Why choose Vegan?</h3>
