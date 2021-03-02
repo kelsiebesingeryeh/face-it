@@ -6,7 +6,7 @@ nav {
 nav ul {
     display: flex;
     margin: 0;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 nav ul li {
@@ -20,6 +20,7 @@ nav ul li:first-child {
 li {
     font-weight: bold;
     font-size: 1.25rem;
+    padding: 0.5em;
 }
 
 nav a {
@@ -27,6 +28,15 @@ nav a {
     font-weight: bold;
     font-size: 1.25rem;
     text-align: right;
+}
+
+nav a:active {
+    background-color: #A63D10;
+}
+
+nav a:hover {
+    background-color: #F4E9E1;
+    color: #1F0800;
 }
 
 .categoryNavList {

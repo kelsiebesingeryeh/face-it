@@ -1,4 +1,7 @@
 .searchImage {
+   display: flex;
+   align-items: center;
+   justify-content: center;
    background-position: center;
    background-size: cover;
    border: 6px solid white;
@@ -14,8 +17,5 @@
    max-height: 60%;
    padding: 1rem;
    border-radius: 8px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
    margin: 1rem;
 }

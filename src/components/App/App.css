@@ -29,6 +29,10 @@ a {
   color: #1F0800;
 }
 
+a:hover:active {
+  color: #5E6353;
+}
+
 h1 {
   margin-top: 1em;
   margin-bottom: 0;
@@ -50,6 +54,14 @@ h1 {
   margin: 1rem;
 }
 
+.mainCategory:active {
+  box-shadow: 4px 4px 12px 0 #D1925C;
+}
+
+.mainCategory:hover {
+  box-shadow: 4px 4px 12px 0 #A63D10;
+}
+
 .mainCategoryText {
   color: #F4E9E1;
   background-color:#1F0800;
@@ -62,6 +74,13 @@ h1 {
 
 .missionStatement {
   font-size: 1em;
+}
+
+.searchMessageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
 
 .titleContainer {
