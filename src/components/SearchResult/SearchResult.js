@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 
 const SearchResult = ({img, name, id, brand, tags, productType}) => {
     const styledTags = tags.join(', ');
+    
     return (
-      <Link to={`/:searchResults/${id}`}>
+      <Link to={`/searchResults/${id}`}>
         <article className="cosmeticCard">
           <img src={img} alt={name} className="searchImage" id={id}></img>
           <p className="searchResultDetail">
