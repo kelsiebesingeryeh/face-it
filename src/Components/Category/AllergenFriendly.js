@@ -31,7 +31,7 @@ const AllergenFriendly = ({ allergenFriendly }) => {
       } else if(item === 'nail_polish') {
         return 'https://images.unsplash.com/photo-1506668635606-caa9ef5ce079?ixid=MXwxMjA3fDB8MHxwaG90[…]ufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
       }
-    }
+    };
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
@@ -72,6 +72,6 @@ const AllergenFriendly = ({ allergenFriendly }) => {
     } else if (!productsOnDisplay.length) {
       return <Redirect to='/error' />
     }
-}
+};
 
 export default AllergenFriendly;

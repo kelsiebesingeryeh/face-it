@@ -41,7 +41,6 @@ class App extends Component {
       })
       .catch((err) => {
         this.setState({error: true, isFetching: false})
-        console.log("error")
       });
   }
 

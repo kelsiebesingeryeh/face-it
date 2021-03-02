@@ -2,13 +2,10 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
-import { Link, Route } from 'react-router-dom';
 
 const Vegan = ({ vegan }) => {
     const filterMakeupTypes = vegan.map((item) => item["product_type"]);
     const productTypes = filterMakeupTypes.filter((item, index) => filterMakeupTypes.indexOf(item) === index);
-
-    //filter through for blush to make blush array
 
     const assignUrl = (item) => {
       if(item === 'mascara') {
@@ -32,11 +29,10 @@ const Vegan = ({ vegan }) => {
       } else if(item === 'nail_polish') {
         return 'https://images.unsplash.com/photo-1506668635606-caa9ef5ce079?ixid=MXwxMjA3fDB8MHxwaG90[…]ufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
       }
-    }
+    };
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
-      //do we pass down the blushArray here? to give to Items?
       return <Type
                 title={item}
                 key={item}
@@ -79,7 +75,7 @@ const Vegan = ({ vegan }) => {
     } else {
       return <Redirect to='/error' />
     }
-}
+};
 
 
 

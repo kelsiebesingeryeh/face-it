@@ -79,7 +79,6 @@ const Eco = ({eco}) => {
         </section>
       )
     } else if (!productsOnDisplay.length) {
-      console.log('does eco props exists upon refresh', eco);
       return <Redirect to='/error' />
     }
 }
