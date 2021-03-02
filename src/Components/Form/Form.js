@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Form.css';
+import PropTypes from "prop-types";
 
 const Form = ({ searchMakeup }) => {
   const [userInput, setUserInput] = useState("");
@@ -31,3 +32,7 @@ const Form = ({ searchMakeup }) => {
 };
 
 export default Form;
+
+Form.propTypes = {
+  searchMakeup: PropTypes.func,
+};
