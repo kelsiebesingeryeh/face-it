@@ -1,6 +1,7 @@
 import React from 'react';
 import './Cosmetic.css';
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Cosmetic = ({name, brand, img, tags, productType, id, category}) => {
   const styledTags = tags.join(', ');
@@ -20,3 +21,13 @@ const Cosmetic = ({name, brand, img, tags, productType, id, category}) => {
 }
 
 export default Cosmetic;
+
+Cosmetic.propTypes = {
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  img: PropTypes.string,
+  tags: PropTypes.array,
+  productType: PropTypes.string,
+  id: PropTypes.number,
+  category: PropTypes.string
+};
