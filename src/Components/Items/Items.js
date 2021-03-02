@@ -1,6 +1,8 @@
 import React from 'react';
 import Cosmetic from '../Cosmetic/Cosmetic';
 import './Items.css';
+import PropTypes from "prop-types";
+
 
 const Items = ({ data, type, category }) => {
   const cosmeticTypes = data.filter(item => item['product_type'] === type)
@@ -25,3 +27,9 @@ const Items = ({ data, type, category }) => {
 }
 
 export default Items;
+
+Items.propTypes = {
+  data: PropTypes.array,
+  type: PropTypes.string,
+  category: PropTypes.string,
+};
