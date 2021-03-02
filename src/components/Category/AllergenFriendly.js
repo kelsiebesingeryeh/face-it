@@ -35,11 +35,11 @@ const AllergenFriendly = ({ allergenFriendly }) => {
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
-      return <Type 
-        title={item} 
-        key={item} 
-        img={url} 
-        category={"allergenFriendly"} 
+      return <Type
+        title={item}
+        key={item}
+        img={url}
+        category={"allergenFriendly"}
       />;
     });
 
@@ -54,17 +54,17 @@ const AllergenFriendly = ({ allergenFriendly }) => {
               </p>
             <h3 className='descriptionHeading'>Why choose Allergen Friendly?</h3>
               <p className='categoryDescription'>
-              If you notice skin irritations or any symptomatic reaction forming when you use certain products, it might be beneficial to look into hypoallergenic products and/or products that are free of common allergens.  Hypoallergenic makeup in particular is usually a gentler formula and often fragrance-free.  
+              If you notice skin irritations or any symptomatic reaction forming when you use certain products, it might be beneficial to look into hypoallergenic products and/or products that are free of common allergens.  Hypoallergenic makeup in particular is usually a gentler formula and often fragrance-free.
               </p>
           </div>
-          <div className='productContainer'>  
+          <div className='productContainer'>
             {productsOnDisplay}
           </div>
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.healthline.com/health/hypoallergenic-makeup' target="_blank">Healthline</a>
-                <a href='https://www.fda.gov/cosmetics/cosmetics-labeling-claims/hypoallergenic-cosmetics' target="_blank">FDA.gov</a>
+                <a href='https://www.healthline.com/health/hypoallergenic-makeup' target="_blank" rel="noreferrer">Healthline</a>
+                <a href='https://www.fda.gov/cosmetics/cosmetics-labeling-claims/hypoallergenic-cosmetics' target="_blank" rel="noreferrer">FDA.gov</a>
               </div>
           </div>
         </section>

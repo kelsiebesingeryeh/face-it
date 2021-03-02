@@ -6,7 +6,7 @@ import './Category.css';
 const Eco = ({eco}) => {
     //problem: upon refresh, data does not persist
     //(1) localStorage? History? Cache? sessionStorage?
-    //(2) useEffect? 
+    //(2) useEffect?
     const [productType, setProductType] = useState(eco);
 
     const filterMakeupTypes = eco.map((item) => item["product_type"]);
@@ -40,11 +40,11 @@ const Eco = ({eco}) => {
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
-      return <Type 
-      title={item} 
-      key={item} 
-      img={url} 
-      category={"eco"} 
+      return <Type
+      title={item}
+      key={item}
+      img={url}
+      category={"eco"}
       />;
     });
 
@@ -59,21 +59,21 @@ const Eco = ({eco}) => {
               </p>
             <h3 className='descriptionHeading'>Why choose Eco?</h3>
               <p className='categoryDescription'>
-              Organizations like CertClean, EcoCert and EWG have already vetted these products for the impact they have on the environment and for the “clean” benefits based on the amount of harmful chemicals that may or may not be present. Find out more information about each certification under "Sources" at the bottom of this page. 
+              Organizations like CertClean, EcoCert and EWG have already vetted these products for the impact they have on the environment and for the “clean” benefits based on the amount of harmful chemicals that may or may not be present. Find out more information about each certification under "Sources" at the bottom of this page.
               </p>
           </div>
-          <div className='productContainer'>  
+          <div className='productContainer'>
             {productsOnDisplay}
           </div>
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.certclean.com/about_us/' target="_blank">CertClean</a>
-                <a href='https://www.ewg.org/ewgverified/about-the-mark.php' target="_blank">EWG Verified</a>
-                <a href='https://www.ecocert.com/en-US/certification-detail/natural-and-organic-cosmetics-cosmos' target="_blank">EcoCert</a>
-                <a href='https://www.nongmoproject.org/gmo-facts/' target="_blank">Non-GMO</a>
-                <a href='https://www.usda.gov/topics/organic' target="_blank">USDA Organic</a>
-                <a href='https://www.purpicks.com/aboutus/' target="_blank">purpicks</a>
+                <a href='https://www.certclean.com/about_us/' target="_blank" rel="noreferrer">CertClean</a>
+                <a href='https://www.ewg.org/ewgverified/about-the-mark.php' target="_blank" rel="noreferrer">EWG Verified</a>
+                <a href='https://www.ecocert.com/en-US/certification-detail/natural-and-organic-cosmetics-cosmos' target="_blank" rel="noreferrer">EcoCert</a>
+                <a href='https://www.nongmoproject.org/gmo-facts/' target="_blank" rel="noreferrer">Non-GMO</a>
+                <a href='https://www.usda.gov/topics/organic' target="_blank" rel="noreferrer">USDA Organic</a>
+                <a href='https://www.purpicks.com/aboutus/' target="_blank" rel="noreferrer">purpicks</a>
               </div>
           </div>
         </section>
