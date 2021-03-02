@@ -1,5 +1,6 @@
 import React from 'react';
 import './SingleProduct.css';
+import PropTypes from "prop-types";
 
 const SingleProduct = ({id, name, brand, description, productType, tags,  website, img}) => {
     const styledTags = tags.join(", ");
@@ -21,3 +22,14 @@ const SingleProduct = ({id, name, brand, description, productType, tags,  websit
 }
 
 export default SingleProduct;
+
+SingleProduct.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  description: PropTypes.string,
+  productType: PropTypes.string,
+  tags: PropTypes.array,
+  website: PropTypes.string,
+  img: PropTypes.string,
+};
