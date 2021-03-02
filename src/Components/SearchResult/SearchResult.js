@@ -1,6 +1,7 @@
 import React from 'react';
 import './SearchResult.css';
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const SearchResult = ({img, name, id, brand, tags, productType}) => {
     const styledTags = tags.join(', ');
@@ -19,3 +20,11 @@ const SearchResult = ({img, name, id, brand, tags, productType}) => {
     );
 }
 export default SearchResult;
+
+SearchResult.propTypes = {
+  img: PropTypes.string,
+  name: PropTypes.string,
+  id: PropTypes.number,
+  brand: PropTypes.string,
+  tags: PropTypes.array
+};
