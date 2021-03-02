@@ -125,7 +125,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe('Search Bar', () => {
+  describe.only('Search Bar', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -137,6 +137,9 @@ describe('FaceIt', () => {
     })
 
     it('Should have a functional serach bar', () => {
+      cy.get('form input').type('e.l.f')
+        .get('form button').click()
+        .get('.searchResultsContainer').should('be.visible')
       //Type
       //Search
       //check result to be equal to expected outcome
