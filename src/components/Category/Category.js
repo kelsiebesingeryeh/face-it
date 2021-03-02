@@ -8,9 +8,7 @@ const Category = ({ data }) => {
       image_link: item["image_link"],
     });
   })
-  console.log('filter makeup', filteredMakeupTypes);
   const productTypes = filteredMakeupTypes.filter((item, index) => filteredMakeupTypes.indexOf(item) === index)
-  console.log(productTypes)
   
   const productsToDisplay = productTypes.map((item) => {
     if (item === "mascara") {
