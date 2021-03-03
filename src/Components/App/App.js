@@ -13,7 +13,7 @@ import Form from '../Form/Form';
 import Items from '../Items/Items';
 import SearchResults from '../SearchResults/SearchResults';
 import Details from '../Details/Details';
-import apiCalls from '../apiCalls';
+import apiCalls from '../../apiCalls';
 
 class App extends Component {
   constructor(){
@@ -30,8 +30,12 @@ class App extends Component {
     }
   }
 
+//if a developer
+//change line 38 to: apiCalls.getLocalData()
+//when preparing a feature for a build change line 38 to: apiCalls.getApiData()
+
   componentDidMount(){
-    apiCalls.getApiData()
+    apiCalls.getLocalData()
       .then((data) => {
         this.setState({
           makeup: data,

@@ -7,7 +7,7 @@ const apiCalls = {
 
 //use below for development
 //need to have local server running
-//please see REAME for further details
+//please see README for further details
   getLocalData: () => {
     return getData('http://localhost:3001/api/v1/makeup')
   }
