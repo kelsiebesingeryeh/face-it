@@ -1,13 +1,13 @@
 .category {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100vw;
 }
 
 .categoryDefinition {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 .categoryTitle {
     display: flex;
@@ -15,17 +15,17 @@
 }
 
 .descriptionContainer {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
     padding: 2em;
     padding-top: 0;
 }
 
 .linkContainer {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 1em;
 }
 
@@ -35,9 +35,9 @@
 }
 
 .sourcesContainer {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     width: 100%;
 }

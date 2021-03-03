@@ -1,41 +1,41 @@
 .error-message {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 1em;
-  height: 30vh;
-  padding: 4em 4em 0 4em;
   background: url('./error-img.jpg') #1F0800;
   background-position: center;
   background-size: 150%;
   box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8),
     -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
   border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  height: 30vh;
+  padding: 4em 4em 0 4em;
 }
 
 .message {
-  color: #F4E9E1;
   background-color:#1F0800;
+  border-radius: 7px;
+  color: #F4E9E1;
+  margin: 0;
+  padding: 1em;
   text-align: center;
   width:70vw;
-  padding: 1em;
-  margin: 0;
-  border-radius: 7px;
 }
 
 .message h2 {
   border: none;
-  width: inherit;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  width: inherit;
 }
 
 .message p {
-  padding: 0;
   margin: .5em;
+  padding: 0;
 }
 
 .message h3 {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }

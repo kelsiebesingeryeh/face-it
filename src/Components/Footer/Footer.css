@@ -1,9 +1,9 @@
 footer {
+  align-items: center;
   background-color: #A63D10;
   color: #F4E9E1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 2em;
 }
 
@@ -14,9 +14,9 @@ h5 {
 .dev {
   border: solid 1px #D1925C;
   border-radius: 7px;
-  width: 6em;
   padding: 1em;
   text-align: center;
+  width: 6em;
 }
 
 .dev-container {
@@ -26,15 +26,15 @@ h5 {
 }
 
 .links {
-  display: flex;
-  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
 }
 
 .links img {
-  width: 2em;
   margin: .1em;
+  width: 2em;
 }
 
 @media screen and (min-width: 800px) {
