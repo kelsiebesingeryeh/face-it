@@ -1,16 +1,16 @@
 .productType {
+  align-items: center;
   background-position: center;
   background-size: cover;
   border: 6px solid white;
-  box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8);
-  padding: 1rem;
   border-radius: 8px;
-  width: 40vw;
-  height: 20vh;
+  box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8);
   display: flex;
-  align-items: center;
+  height: 20vh;
   justify-content: center;
   margin: 0.5rem;
+  padding: 1rem;
+  width: 40vw;
 }
 
 .productType:active {

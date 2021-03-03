@@ -49,8 +49,8 @@ const Eco = ({eco}) => {
         <section className='category'>
           <h2 className='categoryTitle'>Eco</h2>
           <div className='descriptionContainer'>
-            <h3 className='defintionHeading'>What is Eco?</h3>
-              <p className='categoryDefintion'>
+            <h3 className='definitionHeading'>What is Eco?</h3>
+              <p className='categoryDefinition'>
               Products that are CertClean, EWG Verified, EcoCert, Non-GMO, USDA Organic, purpicks — We’ve defined that products in the "Eco" category are considered to be better for the environment, as determined by these respective organizations.
               </p>
             <h3 className='descriptionHeading'>Why choose Eco?</h3>

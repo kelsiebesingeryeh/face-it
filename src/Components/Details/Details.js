@@ -5,27 +5,37 @@ import { Redirect } from "react-router-dom";
 
 const Details = ({ makeup, id }) => {
   const [singleProduct, setSingleProduct] = useState(null);
-  console.log('makeup', makeup);
-  console.log("before", singleProduct);
-  // useEffect(() => {
-  //   // findProduct(id);
-  //   // console.log('state', singleProduct)
-  // }, []);
+  useEffect(() => {
+    detailsAPI();
+    console.log('state', singleProduct)
+  }, [id]);
+
+  const detailsAPI = () => {
+    return fetch("http://localhost:3001/api/v1/makeup")
+      .then((response) => response.json())
+      .then((data) => {
+        const allMakeup = makeup.length ? makeup : data
+        const singleMakeup = allMakeup.find((item) => item.id === parseInt(id))
+        if (singleMakeup) {
+          setSingleProduct(singleMakeup)
+        }
+      })
+  }
+  
+  //need a fetch in the useEffect
 
     // const findProduct = () => {
-    //     const singleMakeup = makeup.find((item) => item.id === parseInt(id));
-    //     // returns an object with the id that matches in makeup array
-    //     console.log('single', singleMakeup)
-    //    setSingleProduct(singleMakeup);
+        
+    //   //   console.log('single', singleMakeup)
+    //   //  return setSingleProduct(singleMakeup);
     // } 
 
     const detailsOnDisplay = () => {
-        // findProduct();
-        // if (makeup.length === 0) {
-        //   return <Redirect to="/error" />;
-        // }
-        setSingleProduct(makeup.find((item) => item.id === parseInt(id)));
-        console.log('after', singleProduct)
+      // const ourProduct = findProduct();
+        if (!singleProduct) {
+          return <Redirect to="/error" />;
+        }
+        // console.log('singleDetail', singleProduct)
         return (
           <SingleProduct
             id={singleProduct.id}

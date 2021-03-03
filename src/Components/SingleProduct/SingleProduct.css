@@ -7,43 +7,43 @@
 }
 
 .cosmeticDetailsImage {
+    align-items: center;
     background-color: white;
-    max-width: 65%;
-    max-height: 60%;
-    object-fit: contain;
-    margin-bottom: 1rem;
     background-position: center;
     background-size: cover;
     border: 6px solid white;
+    border-radius: 8px;
     box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8),
         -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
-    padding: 1rem;
-    border-radius: 8px;
     display: flex;
-    align-items: center;
     justify-content: center;
     margin: 1rem;
+    margin-bottom: 1rem;
+    max-width: 65%;
+    max-height: 60%;
+    object-fit: contain;
+    padding: 1rem;
 }
 
 .detailsPageWrapper {
+    align-items: center;
     background-color: white;
-    margin-bottom: 1rem;
     background-position: center;
     background-size: cover;
     border: 6px solid white;
     box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.5),
-        -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
-    padding: 1rem;
+    -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
     border-radius: 8px;
     display: flex;
-    align-items: center;
     justify-content: center;
     margin: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 .singleProductBrand {
-    margin-top: 0;
     border: solid 2px #1F0800;
+    margin-top: 0;
     width: 60vw;
 }
 
