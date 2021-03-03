@@ -4,3 +4,6 @@
     grid-gap: .5rem;
     padding: 1.25rem;
 }
+
+@media screen and (min-width: 800px) {
+} 
