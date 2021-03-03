@@ -13,6 +13,7 @@ import Form from '../Form/Form';
 import Items from '../Items/Items';
 import SearchResults from '../SearchResults/SearchResults';
 import Details from '../Details/Details';
+import apiCalls from '../../apiCalls';
 
 class App extends Component {
   constructor(){
@@ -23,15 +24,18 @@ class App extends Component {
       allergenFriendly: [],
       eco: [],
       filteredMakeup: [],
-      isFetching: true, 
+      isFetching: true,
       isSearching: false,
       error: false,
     }
   }
 
+//if a developer
+//change line 38 to: apiCalls.getLocalData()
+//when preparing a feature for a build change line 38 to: apiCalls.getApiData()
+
   componentDidMount(){
-    fetch('http://localhost:3001/api/v1/makeup')
-      .then((response) => response.json())
+    apiCalls.getLocalData()
       .then((data) => {
         this.setState({
           makeup: data,
@@ -62,7 +66,7 @@ class App extends Component {
     this.setState({filteredMakeup: uniqueFilteredMakeup, isSearching: true})
     }
   }
-  
+
   sortByCategory = response => {
     const vegan = response.filter(item => item['tag_list'].includes('Vegan'));
     const eco = response.filter(
@@ -106,7 +110,7 @@ class App extends Component {
         <Nav handleClick={this.handleClick} />
         {this.state.isFetching && <LoadingMessage />}
         <Route exact path='/error' render={() => <Error />} />
-        
+
         <Switch>
           <Route
             exact
@@ -123,7 +127,7 @@ class App extends Component {
                 <Details makeup={this.state.makeup} id={match.params.id} />
                 );
               }}
-          /> 
+          />
           <Route
             exact
             path='/'
@@ -136,7 +140,7 @@ class App extends Component {
                 ) {
                   return <Redirect to='/searchResults' />;
               } else if(
-                this.state.filteredMakeup.length === 0 && 
+                this.state.filteredMakeup.length === 0 &&
                 this.state.isSearching
                 ) {
                   return (
@@ -513,7 +517,7 @@ class App extends Component {
                 <Details makeup={this.state.makeup} id={match.params.id} />
               );
             }}
-          /> 
+          />
         </Switch>
         <Footer />
       </main>

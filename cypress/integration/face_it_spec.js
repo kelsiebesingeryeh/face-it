@@ -2,7 +2,7 @@ describe('FaceIt', () => {
   //Please have the local server running for the intercepts to run accurately
   const baseURL = 'http://localhost:3000/';
 
-  describe.skip('Home', () => {
+  describe('Home', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -34,7 +34,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe.skip('Nav Bar', () => {
+  describe('Nav Bar', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -73,7 +73,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe.skip('Category into Type and Items', () => {
+  describe('Category into Type and Items', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -102,7 +102,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe.skip('Items into Cosmetic', () => {
+  describe('Items into Cosmetic', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -125,7 +125,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe.only('Search Bar', () => {
+  describe('Search Bar', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -146,7 +146,7 @@ describe('FaceIt', () => {
     })
   })
 
-  describe.skip('Loading', () => {
+  describe('Loading', () => {
     beforeEach(() => {
       cy.fixture('mock.json')
         .then(makeup => {
@@ -160,31 +160,26 @@ describe('FaceIt', () => {
     it('Should display a loading message on home', () => {
       cy.get('.loading-message').should('be.visible')
     })
-
-    it('Should display a loading message when naviagting to category', () => {
-      //do we need one here? And at other locations, too?
-    })
-
   })
 
-  describe.skip('Error Message', () => {
-    //Error testing problem, to test on our server, we must include error message & status codes in our server
-
-    //Error testing can *only* occur on original API, not on mock, local server. Please note url difference, however, it doesn't imply data difference between the two.
-      it('Should display an error message on home if there no data to display', () => {
+  describe('Error Message', () => {
+    it('Should display an error message if there is no data to display', () => {
+      cy.intercept('http://localhost:3001/api/v1/makeup/', {
+          body: []
+        })
+      cy.visit(baseURL)
+      cy.get('.App section a article h3').contains('Vegan').click()
+        .get('.error-message').should('be.visible')
+  })
+      it('Should display an error message if a user navigates to an invalid URL', () => {
         cy.fixture('mock.json')
-          .then(() => {
+          .then(makeup => {
             cy.intercept('http://localhost:3001/api/v1/makeup/', {
-              statusCode: 404,
-              body: []
+              body: makeup
             })
           });
-        cy.visit('http://makeup-api.herokuapp.com/api/v1/products.json')
+        cy.visit('http://localhost:3000/vegan/mascara/2000')
         cy.get('.error-message').should('be.visible')
-
-        //Where else besides @ home do we want to have an error redirect?
-        //Refactor catch & error status?
     })
   })
-
 })
