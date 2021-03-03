@@ -12,6 +12,8 @@ __updated: 03/02/2020__
 ---
 ## Introduction
 
+<img src="https://ibb.co/zPxsWBQ" alt="FaceIt logo" width="219" />
+
 This project comes out of the need for an app that can help a concerned & conscientious consumer understand what beauty products match their lifestyle.
 
 Originally, this project was built for a project with Turing School of Software & Design. [See rubric here](https://frontend.turing.io/projects/module-3/stretch.html).
@@ -85,7 +87,7 @@ A user can select a category type, view makeup products available, and then view
 <details>
 <summary>Example of Mobile Experience</summary>
 <br>
-<img width="283" alt="Product page interaction" src="" />
+<img width="283" alt="Product page interaction" src="https://media.giphy.com/media/OGqhmkyEZEIwisuFvO/giphy.gif" />
 </details>
 
 
@@ -95,7 +97,7 @@ A user can view a particular cosmetic's details such as brand, listed price, and
 <details>
 <summary>Example of Mobile Experience</summary>
 <br>
-<img width="283" alt="viewing cosmetic details" src="" />
+<img width="283" alt="viewing cosmetic details" src="https://media.giphy.com/media/BgfWldURYP7lcnqwJV/giphy.gif" />
 </details>
 
 #### Navigation Bar
@@ -104,16 +106,16 @@ A user can click the links in the navigation bar to visit a category's section r
 <details>
 <summary>Example of Mobile Experience</summary>
 <br>
-<img width="283" alt="using the navigation bar to go to different categories" src="" />
+<img width="283" alt="using the navigation bar to go to different categories" src="https://media.giphy.com/media/f2cp8uRkPVhEJko1wC/giphy.gif" />
 </details>
 
 #### Search Bar
-A user can search for a product by the certification tag (such as 'organic' or 'gluten free')
+A user can search for a product by the certification tag (such as 'organic' or 'gluten free') or brand (such as 'e.l.f')
 
 <details>
 <summary>Example of Mobile Experience</summary>
 <br>
-<img width="283" alt="using the navigation bar to search" src="" />
+<img width="283" alt="using the navigation bar to search" src="https://media.giphy.com/media/VUpTsyooy89hO1mvtN/giphy.gif" />
 </details>
 
 #### Error Message
@@ -140,7 +142,7 @@ Testing the UX & UI of our app.
 <details>
 <summary>Example of Cypress Experience</summary>
 <br>
-<img width="600" alt="testing user flow in cypress" src="https://media.giphy.com/media/P4NhDLMlkXlcwAKIcE/giphy.gif">
+<img width="600" alt="testing user flow in cypress" src="https://media.giphy.com/media/fg5R6OULfk2IMUupQG/giphy.gif">
 </details>
 
 ## Technologies
