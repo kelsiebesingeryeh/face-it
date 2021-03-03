@@ -30,6 +30,3 @@ const Category = ({ data }) => {
 };
 
 export default Category;
-
-//NOTES - may need to call the fetch in category instead of App because everytime you refresh the page you get an error, not great for user experience
-// something to consider

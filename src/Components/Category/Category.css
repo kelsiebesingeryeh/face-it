@@ -49,6 +49,6 @@
 
 @media screen and (min-width: 800px) {
   .productContainer {
-      grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 3 1fr;
   }
 }

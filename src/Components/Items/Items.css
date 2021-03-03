@@ -6,4 +6,7 @@
 }
 
 @media screen and (min-width: 800px) {
-} 
+    .productTypeContainer {
+        grid-template-columns: repeat(3, 1fr)
+    }
+  }
