@@ -46,3 +46,9 @@
     background-color: #5E6353;
     margin-bottom: 0;
 }
+
+@media screen and (min-width: 800px) {
+  .productContainer {
+    grid-template-columns: 3 1fr;
+  }
+}

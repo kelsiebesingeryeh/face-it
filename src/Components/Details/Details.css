@@ -1,5 +1,11 @@
 .productDetailsContainer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .detailsPageWrapper {
+    width: 72vw;
+  }
 }
