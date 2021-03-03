@@ -12,7 +12,7 @@ const LoadingImg = () => {
       <path d='M409.09 388.72C451.51 340.61 512.46 325.04 545.23 353.94C578 382.83 570.18 445.25 527.76 493.36C485.35 541.46 424.39 557.04 326.95 601.49C358.85 499.24 366.67 436.82 409.09 388.72Z' id='bKqGrEwjW' opacity='1' fill='#5E6353' fill-opacity='1' stroke='#F4E9E1' stroke-width='10' stroke-opacity='1'>
       </path>
       <path d='M122.69 502.44C77.74 454.16 69.5 388.76 104.29 356.38C139.07 323.99 203.71 336.89 248.66 385.17C293.61 433.46 301.85 498.85 335.61 604.86C232.28 563.62 167.64 550.73 122.69 502.44Z' id='e3ntfaScE' opacity='1' fill='#5E6353' fill-opacity='1' stroke='#F4E9E1' stroke-width='10' stroke-opacity='1'>
-</path>
+      </path>
       <path d='M327.85 136.52L327.85 15.65L327.85 136.52Z' id='b1FBDQhhcU' opacity='1' fill='#5E6353' fill-opacity='1' stroke='#F4E9E1' stroke-width='11' stroke-opacity='1'>
       </path>
       <path d='M265.3 188.78L177.39 127.91L265.3 188.78Z' id='c5BZy3dqdv' opacity='1' fill='#5E6353' fill-opacity='1'  stroke='#F4E9E1' stroke-width='10' stroke-opacity='1'>
