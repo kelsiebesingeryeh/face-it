@@ -1,7 +1,7 @@
 import React from 'react';
 import './Type.css';
 import {Link} from 'react-router-dom';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const Type = ({img, title, category}) => {
   const checkTitle = (title) => {
@@ -14,7 +14,7 @@ const Type = ({img, title, category}) => {
 
   return (
     <Link to={`/${category}/${title}`}>
-      <article className="productType" style={{backgroundImage:`url(${img})`}}>
+      <article className='productType' style={{backgroundImage:`url(${img})`}}>
         <h3>{checkTitle(title)}</h3>
       </article>
     </Link>

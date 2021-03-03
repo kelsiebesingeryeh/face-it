@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Form.css';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const Form = ({ searchMakeup }) => {
-  const [userInput, setUserInput] = useState("");
+  const [userInput, setUserInput] = useState('');
   const updateForm = (event) => {
     setUserInput(event.target.value.toLowerCase());
   };
@@ -11,20 +11,20 @@ const Form = ({ searchMakeup }) => {
   const filterSearchMakeup = (event) => {
     event.preventDefault();
     searchMakeup(userInput);
-    setUserInput("");
+    setUserInput('');
   };
   return (
-    <form className="searchForm">
+    <form className='searchForm'>
       <input
-        type="text"
-        placeholder='Search by Brand or Tag (e.g.: "natural")'
+        type='text'
+        placeholder="Search by Brand or Tag (e.g.: 'natural')"
         value={userInput}
         onChange={updateForm}
-        aria-label="Search Makeup Items"
-        aria-required="true"
+        aria-label='Search Makeup Items'
+        aria-required='true'
       >
       </input>
-      <button onClick={filterSearchMakeup} className="searchButton">
+      <button onClick={filterSearchMakeup} className='searchButton'>
         Search
       </button>
     </form>

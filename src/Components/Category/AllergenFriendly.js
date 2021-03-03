@@ -5,7 +5,7 @@ import './Category.css';
 import PropTypes from 'prop-types';
 
 const AllergenFriendly = ({ allergenFriendly }) => {
-    const filterMakeupTypes = allergenFriendly.map((item) => item["product_type"]);
+    const filterMakeupTypes = allergenFriendly.map((item) => item['product_type']);
     const productTypes = filterMakeupTypes.filter(
       (item, index) => filterMakeupTypes.indexOf(item) === index
     );
@@ -40,7 +40,7 @@ const AllergenFriendly = ({ allergenFriendly }) => {
         title={item}
         key={item}
         img={url}
-        category={"allergenFriendly"}
+        category={'allergenFriendly'}
       />;
     });
 
@@ -64,8 +64,8 @@ const AllergenFriendly = ({ allergenFriendly }) => {
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.healthline.com/health/hypoallergenic-makeup' target="_blank" rel="noreferrer">Healthline</a>
-                <a href='https://www.fda.gov/cosmetics/cosmetics-labeling-claims/hypoallergenic-cosmetics' target="_blank" rel="noreferrer">FDA.gov</a>
+                <a href='https://www.healthline.com/health/hypoallergenic-makeup' target='_blank' rel='noreferrer'>Healthline</a>
+                <a href='https://www.fda.gov/cosmetics/cosmetics-labeling-claims/hypoallergenic-cosmetics' target='_blank' rel='noreferrer'>FDA.gov</a>
               </div>
           </div>
         </section>

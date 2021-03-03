@@ -2,10 +2,10 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const Vegan = ({ vegan }) => {
-    const filterMakeupTypes = vegan.map((item) => item["product_type"]);
+    const filterMakeupTypes = vegan.map((item) => item['product_type']);
     const productTypes = filterMakeupTypes.filter((item, index) => filterMakeupTypes.indexOf(item) === index);
 
     const assignUrl = (item) => {
@@ -66,9 +66,9 @@ const Vegan = ({ vegan }) => {
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.nytimes.com/2019/02/26/style/why-you-should-care-about-vegan-beauty.html' target="_blank" rel="noreferrer">New York Times</a>
-                <a href='https://www.piperberry.com/blogs/clean-beauty-blog/9-excellent-reasons-to-start-using-vegan-beauty-products' target="_blank" rel="noreferrer">Piperberry</a>
-                <a href='https://www.cosmopolitan.com/uk/beauty-hair/makeup/a45915/vegan-makeup/' target="_blank" rel="noreferrer">Cosmopolitan Magazine</a>
+                <a href='https://www.nytimes.com/2019/02/26/style/why-you-should-care-about-vegan-beauty.html' target='_blank' rel='noreferrer'>New York Times</a>
+                <a href='https://www.piperberry.com/blogs/clean-beauty-blog/9-excellent-reasons-to-start-using-vegan-beauty-products' target='_blank' rel='noreferrer'>Piperberry</a>
+                <a href='https://www.cosmopolitan.com/uk/beauty-hair/makeup/a45915/vegan-makeup/' target='_blank' rel='noreferrer'>Cosmopolitan Magazine</a>
               </div>
           </div>
         </section>
