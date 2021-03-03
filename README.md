@@ -21,8 +21,8 @@ Originally, this project was built for a project with Turing School of Software 
 ## Features
 
 To view please:
-- This app is still in development
-- Check back again.
+- This app has yet to be deployed
+- please come back at a later data
 
 ### Categories:
 - [Home Page](#Home-Page)
@@ -60,25 +60,25 @@ A user can select a category type and view makeup products available in that cat
 <details>
 <summary>Example of User flow</summary>
 <br>
-<img width="283" alt="eco page interaction" src="https://media.giphy.com/media/tNlGDjgYWICaJRQfVH/giphy.gif">
+<img width="283" alt="eco page interaction" src="https://media.giphy.com/media/tNlGDjgYWICaJRQfVH/giphy.gif" />
 </details>
 
 <details>
 <summary>Example of Eco</summary>
 <br>
-<img width="283" alt="static eco page interaction" src="https://imgur.com/yrAz4JX">
+<img width="283" alt="static eco page interaction" src="https://imgur.com/yrAz4JX" />
 </details>
 
 <details>
 <summary>Example of Allergen Friendly</summary>
 <br>
-<img width="283" alt="static allergen friendly category page interaction" src="https://imgur.com/SIWASk7">
+<img width="283" alt="static allergen friendly category page interaction" src="https://imgur.com/SIWASk7" />
 </details>
 
 <details>
 <summary>Example of Vegan</summary>
 <br>
-<img width="283" alt="static vegan page interaction" src="https://imgur.com/yGxCWoU">
+<img width="283" alt="static vegan page interaction" src="https://imgur.com/yGxCWoU" />
 </details>
 
 #### Product Page
@@ -124,7 +124,7 @@ If there's a failure to load data from the API or if there's been a user-side er
 <details>
 <summary>Example of Mobile Experience</summary>
 <br>
-<img width="283" alt="error message" src="" />
+<img width="283" alt="error message" src="https://ibb.co/CKwg9Mv" />
 </details>
 
 #### Desktop Additions
@@ -133,7 +133,7 @@ Note hover functionality
 <details>
 <summary>Example of Mobile Experience</summary>
 <br>
-<img width="283" alt="desktop hover abilities" src="" />
+<img width="283" alt="desktop hover abilities" src="https://media.giphy.com/media/uyW7BBvvaAEnreuvWy/giphy.gif" />
 </details>
 
 #### Cypress User Flow Testing
