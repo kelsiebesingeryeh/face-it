@@ -1,5 +1,5 @@
 # 💄🌱 FaceIt 🐰💄
-__updated: 02/27/2020__
+__updated: 03/02/2020__
 
 ---
 #### Table of Contents
@@ -45,20 +45,39 @@ To view please:
 Upon navigating to our landing page, users see the available product categories: vegan, allergen friendly, and eco conscious.
 
 <details>
-<summary>Example of Mobile Experience</summary>
+<summary>Example of Home Page</summary>
 <br>
- <img width="283" alt="home page interaction" src="">
+ <img width="283" alt="static home page interaction" src="https://imgur.com/j9fLUoC">
+
+ <img width="283" alt="home page gif" src="https://media.giphy.com/media/JkYD0SY27cAwdGcZht/giphy.gif">
 </details>
 
 #### Category Page
 A user can select a category type and view makeup products available in that category.
 
 <details>
-<summary>Example of Mobile Experience</summary>
+<summary>Example of User flow</summary>
 <br>
-<img width="283" alt="category page interaction" src="">
+<img width="283" alt="eco page interaction" src="https://media.giphy.com/media/tNlGDjgYWICaJRQfVH/giphy.gif">
 </details>
 
+<details>
+<summary>Example of Eco</summary>
+<br>
+<img width="283" alt="static eco page interaction" src="https://imgur.com/yrAz4JX">
+</details>
+
+<details>
+<summary>Example of Allergen Friendly</summary>
+<br>
+<img width="283" alt="static allergen friendly category page interaction" src="https://imgur.com/SIWASk7">
+</details>
+
+<details>
+<summary>Example of Vegan</summary>
+<br>
+<img width="283" alt="static vegan page interaction" src="https://imgur.com/yGxCWoU">
+</details>
 
 #### Product Page
 A user can select a category type, view makeup products available, and then view the items of that product type in that category.
@@ -66,7 +85,7 @@ A user can select a category type, view makeup products available, and then view
 <details>
 <summary>Example of Mobile Experience</summary>
 <br>
-<img width="283" alt="Product page interaction"src="" />
+<img width="283" alt="Product page interaction" src="" />
 </details>
 
 
@@ -98,7 +117,7 @@ A user can search for a product by the certification tag (such as 'organic' or '
 </details>
 
 #### Error Message
-If there's a failure to load data from the API, an error message will display to let the user know there's been a problem.
+If there's a failure to load data from the API or if there's been a user-side error, an error message will display to let the user know there's been a problem.
 
 <details>
 <summary>Example of Mobile Experience</summary>
@@ -138,7 +157,7 @@ Testing the UX & UI of our app.
 Thanks to the following artists from [Unsplash](https://unsplash.com/):
 - @noahbuscher
 - @brookelark
-- @daniele_franchi 
+- @daniele_franchi
 - @kellysikkema
 - @igorrand
 - @joannakosinska
@@ -152,7 +171,7 @@ More specifics about future work or refactoring can be found in this projects [G
 
 ## Contributions
 
-Thank you <a href="https://github.com/">Person</a>.
+Thank you <a href="https://github.com/lo-la-do-li">Lola Dolinsky</a>, <a href="https://github.com/GreyMatteOr" target="_blank">Matthew Lane</a>, <a href="https://github.com/yiranli624" target="_blank">Elle Li</a>, <a href="https://github.com/letakeane" target="_blank">Leta Keane</a>, and <a href="https://github.com/sertmer" target="_blank">Scott Ertmer</a> for their time and patience.
 
 #### To Contribute
 If you'd like to contribute to the code, please complete the following steps:
