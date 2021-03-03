@@ -1,22 +1,23 @@
 import React from 'react';
 import './Nav.css';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Nav = ({handleClick}) => {
   return (
     <nav>
       <ul>
-        <Link to="/">
+        <Link to='/'>
           <li onClick={() => handleClick()}>Home</li>
         </Link>
-        <div className="categoryNavList">
-          <Link to="/eco">
+        <div className='categoryNavList'>
+          <Link to='/eco'>
             <li onClick={() => handleClick()}>Eco</li>
           </Link>
-          <Link to="/allergenFriendly">
+          <Link to='/allergenFriendly'>
             <li onClick={() => handleClick()}>Allergen Friendly</li>
           </Link>
-          <Link to="/vegan">
+          <Link to='/vegan'>
             <li onClick={() => handleClick()}>Vegan</li>
           </Link>
         </div>
@@ -26,3 +27,7 @@ const Nav = ({handleClick}) => {
 };
 
 export default Nav;
+
+Nav.propTypes = {
+handleClick: PropTypes.func
+};
