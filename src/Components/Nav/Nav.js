@@ -6,22 +6,20 @@ import PropTypes from 'prop-types';
 const Nav = ({handleClick}) => {
   return (
     <nav>
-      <ul>
         <Link to='/'>
-          <li onClick={() => handleClick()}>Home</li>
+          <p onClick={() => handleClick()}>Home</p>
         </Link>
-        <div className='categoryNavList'>
-          <Link to='/eco'>
-            <li onClick={() => handleClick()}>Eco</li>
-          </Link>
-          <Link to='/allergenFriendly'>
-            <li onClick={() => handleClick()}>Allergen Friendly</li>
-          </Link>
-          <Link to='/vegan'>
-            <li onClick={() => handleClick()}>Vegan</li>
-          </Link>
-        </div>
-      </ul>
+      <div className='categoryNavList'>
+        <Link to='/eco'>
+          <p onClick={() => handleClick()}>Eco</p>
+        </Link>
+        <Link to='/allergenFriendly'>
+          <p onClick={() => handleClick()}>Allergen Friendly</p>
+        </Link>
+        <Link to='/vegan'>
+          <p onClick={() => handleClick()}>Vegan</p>
+        </Link>
+      </div>
     </nav>
   );
 };
