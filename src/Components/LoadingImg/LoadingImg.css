@@ -1,7 +1,7 @@
 #loadingImg {
+  animation: pulse 4s ease infinite;
   height: 20vh;
   width: 20vh;
-  animation: pulse 4s ease infinite;
 }
 
 @keyframes pulse {

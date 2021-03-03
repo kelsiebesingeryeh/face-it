@@ -2,13 +2,11 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
-import { Link, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Vegan = ({ vegan }) => {
-    const filterMakeupTypes = vegan.map((item) => item["product_type"]);
+    const filterMakeupTypes = vegan.map((item) => item['product_type']);
     const productTypes = filterMakeupTypes.filter((item, index) => filterMakeupTypes.indexOf(item) === index);
-
-    //filter through for blush to make blush array
 
     const assignUrl = (item) => {
       if(item === 'mascara') {
@@ -32,18 +30,17 @@ const Vegan = ({ vegan }) => {
       } else if(item === 'nail_polish') {
         return 'https://images.unsplash.com/photo-1506668635606-caa9ef5ce079?ixid=MXwxMjA3fDB8MHxwaG90[…]ufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
       }
-    }
+    };
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
-      //do we pass down the blushArray here? to give to Items?
       return <Type
                 title={item}
                 key={item}
                 img={url}
                 id={item}
                 category={'vegan'}
-              />
+              />;
     });
 
 
@@ -52,8 +49,8 @@ const Vegan = ({ vegan }) => {
         <section className='category'>
           <h2 className='categoryTitle'>Vegan</h2>
           <div className='descriptionContainer'>
-            <h3 className='defintionHeading'>What is Vegan?</h3>
-              <p className='categoryDefintion'>
+            <h3 className='definitionHeading'>What is Vegan?</h3>
+              <p className='categoryDefinition'>
                 Products that are free of animal ingredients.
               </p>
             <h3 className='descriptionHeading'>Why choose Vegan?</h3>
@@ -69,9 +66,9 @@ const Vegan = ({ vegan }) => {
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.nytimes.com/2019/02/26/style/why-you-should-care-about-vegan-beauty.html' target="_blank" rel="noreferrer">New York Times</a>
-                <a href='https://www.piperberry.com/blogs/clean-beauty-blog/9-excellent-reasons-to-start-using-vegan-beauty-products' target="_blank" rel="noreferrer">Piperberry</a>
-                <a href='https://www.cosmopolitan.com/uk/beauty-hair/makeup/a45915/vegan-makeup/' target="_blank" rel="noreferrer">Cosmopolitan Magazine</a>
+                <a href='https://www.nytimes.com/2019/02/26/style/why-you-should-care-about-vegan-beauty.html' target='_blank' rel='noreferrer'>New York Times</a>
+                <a href='https://www.piperberry.com/blogs/clean-beauty-blog/9-excellent-reasons-to-start-using-vegan-beauty-products' target='_blank' rel='noreferrer'>Piperberry</a>
+                <a href='https://www.cosmopolitan.com/uk/beauty-hair/makeup/a45915/vegan-makeup/' target='_blank' rel='noreferrer'>Cosmopolitan Magazine</a>
               </div>
           </div>
         </section>
@@ -79,8 +76,12 @@ const Vegan = ({ vegan }) => {
     } else {
       return <Redirect to='/error' />
     }
-}
+};
 
 
 
 export default Vegan;
+
+Vegan.propTypes = {
+  vegan: PropTypes.array,
+};

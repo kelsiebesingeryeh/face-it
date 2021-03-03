@@ -9,24 +9,24 @@ body {
 
 h2 {
   border: solid 1px #D1925C;
-  font-size: 1.25rem;
   display: flex;
+  font-size: 1.25rem;
   justify-content: center;
   padding: 2rem;;
   width: 80vw;
 }
 
 .categoryContainer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100vh;
-  align-items: center;
+  justify-content: center;
 }
 
 a {
-  text-decoration: none;
   color: #1F0800;
+  text-decoration: none;
 }
 
 a:hover:active {
@@ -39,19 +39,19 @@ h1 {
 }
 
 .mainCategory {
+  align-items: center;
   background-position: center;
   background-size: cover;
+  border-radius: 8px;
   border: 6px solid white;
   box-shadow: 4px 4px 12px 0 rgba(142, 137, 137, 0.8),
       -6px -6px 16px 0 rgba(223, 219, 219, 0.8);
-  padding: 1rem;
-  border-radius: 8px;
-  width: 70vw;
-  height: 20vh;
   display: flex;
-  align-items: center;
+  height: 20vh;
   justify-content: center;
   margin: 1rem;
+  padding: 1rem;
+  width: 70vw;
 }
 
 .mainCategory:active {
@@ -77,22 +77,22 @@ h1 {
 }
 
 .searchMessageContainer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100vw;
 }
 
 .titleContainer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 @media screen and (min-width: 800px) {
   .categoryContainer {
-    flex-direction: row;
     height: 52vh;
+    flex-direction: row;
   }
   .mainCategory {
     width: 24vw;

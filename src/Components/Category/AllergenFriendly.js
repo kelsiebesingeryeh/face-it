@@ -2,9 +2,10 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import Type from '../Type/Type';
 import './Category.css';
+import PropTypes from 'prop-types';
 
 const AllergenFriendly = ({ allergenFriendly }) => {
-    const filterMakeupTypes = allergenFriendly.map((item) => item["product_type"]);
+    const filterMakeupTypes = allergenFriendly.map((item) => item['product_type']);
     const productTypes = filterMakeupTypes.filter(
       (item, index) => filterMakeupTypes.indexOf(item) === index
     );
@@ -31,7 +32,7 @@ const AllergenFriendly = ({ allergenFriendly }) => {
       } else if(item === 'nail_polish') {
         return 'https://images.unsplash.com/photo-1506668635606-caa9ef5ce079?ixid=MXwxMjA3fDB8MHxwaG90[…]ufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
       }
-    }
+    };
 
     const productsOnDisplay = productTypes.map((item) => {
       const url = assignUrl(item)
@@ -39,7 +40,7 @@ const AllergenFriendly = ({ allergenFriendly }) => {
         title={item}
         key={item}
         img={url}
-        category={"allergenFriendly"}
+        category={'allergenFriendly'}
       />;
     });
 
@@ -48,8 +49,8 @@ const AllergenFriendly = ({ allergenFriendly }) => {
         <section className='category'>
           <h2 className='categoryTitle'>Allergen Friendly</h2>
           <div className='descriptionContainer'>
-            <h3 className='defintionHeading'>What is Allergen Friendly?</h3>
-              <p className='categoryDefintion'>
+            <h3 className='definitionHeading'>What is Allergen Friendly?</h3>
+              <p className='categoryDefinition'>
               Products that are labeled free of common allergens that may be likely to trigger allergic reactions: Dairy Free, Gluten Free, Hypoallergenic, Peanut Free, and silicone free>
               </p>
             <h3 className='descriptionHeading'>Why choose Allergen Friendly?</h3>
@@ -63,8 +64,8 @@ const AllergenFriendly = ({ allergenFriendly }) => {
           <div className='sourcesContainer'>
             <h3 className='sourcesTitle'>Sources</h3>
               <div className='linkContainer'>
-                <a href='https://www.healthline.com/health/hypoallergenic-makeup' target="_blank" rel="noreferrer">Healthline</a>
-                <a href='https://www.fda.gov/cosmetics/cosmetics-labeling-claims/hypoallergenic-cosmetics' target="_blank" rel="noreferrer">FDA.gov</a>
+                <a href='https://www.healthline.com/health/hypoallergenic-makeup' target='_blank' rel='noreferrer'>Healthline</a>
+                <a href='https://www.fda.gov/cosmetics/cosmetics-labeling-claims/hypoallergenic-cosmetics' target='_blank' rel='noreferrer'>FDA.gov</a>
               </div>
           </div>
         </section>
@@ -72,6 +73,10 @@ const AllergenFriendly = ({ allergenFriendly }) => {
     } else if (!productsOnDisplay.length) {
       return <Redirect to='/error' />
     }
-}
+};
 
 export default AllergenFriendly;
+
+AllergenFriendly.propTypes = {
+  allergenFriendly: PropTypes.array
+};
