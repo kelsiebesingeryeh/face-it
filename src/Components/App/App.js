@@ -13,6 +13,7 @@ import Form from '../Form/Form';
 import Items from '../Items/Items';
 import SearchResults from '../SearchResults/SearchResults';
 import Details from '../Details/Details';
+import apiCalls from '../apiCalls';
 
 class App extends Component {
   constructor(){
@@ -23,15 +24,14 @@ class App extends Component {
       allergenFriendly: [],
       eco: [],
       filteredMakeup: [],
-      isFetching: true, 
+      isFetching: true,
       isSearching: false,
       error: false,
     }
   }
 
   componentDidMount(){
-    fetch("http://localhost:3001/api/v1/makeup")
-      .then((response) => response.json())
+    apiCalls.getApiData()
       .then((data) => {
         this.setState({
           makeup: data,
@@ -63,7 +63,7 @@ class App extends Component {
     this.setState({filteredMakeup: uniqueFilteredMakeup, isSearching: true})
     }
   }
-  
+
   sortByCategory = response => {
     const vegan = response.filter(item => item["tag_list"].includes('Vegan'));
     const eco = response.filter(
@@ -106,7 +106,7 @@ class App extends Component {
       <main>
         <Nav handleClick={this.handleClick} />
         {this.state.isFetching && <LoadingMessage />}
-        
+
         <Switch>
           <Route
             exact
@@ -123,7 +123,7 @@ class App extends Component {
                 <Details makeup={this.state.makeup} id={match.params.id} />
               );
             }}
-          /> 
+          />
           <Route
             exact
             path="/"
@@ -136,7 +136,7 @@ class App extends Component {
                 ) {
                   return <Redirect to="/searchResults" />;
               } else if(
-                this.state.filteredMakeup.length === 0 && 
+                this.state.filteredMakeup.length === 0 &&
                 this.state.isSearching
                 ) {
                   return (
@@ -513,7 +513,7 @@ class App extends Component {
                 <Details makeup={this.state.makeup} id={match.params.id} />
               );
             }}
-          /> 
+          />
           <Route exact path="/error" render={() => <Error />} />
         </Switch>
         <Footer />
