@@ -62,7 +62,6 @@ class App extends Component {
       return item.brand.toLowerCase().includes(userInput)
     })
     const uniqueFilteredMakeup = [...new Set(filteredByTag.concat(filteredByBrand))]
-    console.log(uniqueFilteredMakeup.length)
     this.setState({filteredMakeup: uniqueFilteredMakeup, isSearching: true})
     }
   }
@@ -110,8 +109,6 @@ class App extends Component {
         <Nav handleClick={this.handleClick} />
         {this.state.isFetching && <LoadingMessage />}
         <Route exact path='/error' render={() => <Error />} />
-
-        <Switch>
           <Route
             exact
             path='/searchResults'
@@ -518,7 +515,6 @@ class App extends Component {
               );
             }}
           />
-        </Switch>
         <Footer />
       </main>
     );
