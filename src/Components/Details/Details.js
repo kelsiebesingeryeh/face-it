@@ -12,7 +12,7 @@ const Details = ({ makeup, id }) => {
 
   useEffect(() => {
     const detailsAPI = () => {
-      return apiCalls.getLocalData()
+      return apiCalls.getApiData()
       .then((data) => {
         if( data.length ) {
           const singleMakeup = data.find((item) => item.id === parseInt(id))

@@ -35,7 +35,7 @@ class App extends Component {
 //when preparing a feature for a build change line 38 to: apiCalls.getApiData()
 
   componentDidMount(){
-    apiCalls.getLocalData()
+    apiCalls.getApiData()
       .then((data) => {
         this.setState({
           makeup: data,
