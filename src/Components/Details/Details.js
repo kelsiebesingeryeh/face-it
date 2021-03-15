@@ -4,17 +4,18 @@ import './Details.css';
 import Error from '../Error/Error';
 import { Redirect } from "react-router-dom";
 import LoadingMessage from '../Loading/Loading';
+import apiCalls from '../../apiCalls';
+
 const Details = ({ makeup, id }) => {
   const [singleProduct, setSingleProduct] = useState(null);
-  const [incorrectId, setIncorrectId] = useState(false)
-  useEffect(() => detailsAPI(), [id]);
-  const detailsAPI = () => {
-    return fetch("http://localhost:3001/api/v1/makeup")
-      .then((response) => response.json())
+  const [incorrectId, setIncorrectId] = useState(false);
+
+  useEffect(() => {
+    const detailsAPI = () => {
+      return apiCalls.getLocalData()
       .then((data) => {
         if( data.length ) {
-          const allMakeup = makeup.length ? makeup : data
-          const singleMakeup = allMakeup.find((item) => item.id === parseInt(id))
+          const singleMakeup = data.find((item) => item.id === parseInt(id))
           if (singleMakeup) {
             setSingleProduct(singleMakeup)
           } else {
@@ -22,8 +23,10 @@ const Details = ({ makeup, id }) => {
           }
         }
       })
-      
-  }
+
+    }
+    detailsAPI();
+  }, [id]);
 
 return (
   <div className="productDetailsContainer">
@@ -41,8 +44,7 @@ return (
       website={singleProduct["website_link"]}
       />
     }
-  </div> 
+  </div>
 )
 }
 export default Details;
-
