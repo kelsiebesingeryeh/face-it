@@ -2,7 +2,7 @@ import React from 'react';
 import './SingleProduct.css';
 import PropTypes from 'prop-types';
 
-const SingleProduct = ({id, name, brand, description, productType, tags,  website, img}) => {
+const SingleProduct = ({name, brand, description, tags,  website, img}) => {
     const styledTags = tags.join(', ');
 
     return (
